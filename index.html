@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arob Group | Modern & Elegant Solutions</title>
+    <meta name="description" content="Arob Group - Providing modern and elegant solutions for all your business needs. Clean, responsive, and professional.">
+    
+    <!-- Tailwind CSS v3 Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Global Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-sans text-secondary bg-slate-50 overflow-x-hidden">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-md shadow-sm" id="main-header">
+        <nav class="container py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                    <span class="text-white font-heading font-bold text-xl">A</span>
+                </div>
+                <span class="text-2xl font-heading font-bold tracking-tight text-secondary">AROB <span class="text-primary">GROUP</span></span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <ul class="hidden md:flex space-x-8 text-sm font-medium">
+                <li><a href="#" class="text-primary hover:text-accent transition-colors">Home</a></li>
+                <li><a href="#" class="text-secondary hover:text-primary transition-colors">Services</a></li>
+                <li><a href="#" class="text-secondary hover:text-primary transition-colors">Portfolio</a></li>
+                <li><a href="#" class="text-secondary hover:text-primary transition-colors">About</a></li>
+                <li><a href="#" class="text-secondary hover:text-primary transition-colors">Contact</a></li>
+            </ul>
+
+            <!-- CTA Button -->
+            <div class="hidden md:block">
+                <a href="#" class="bg-primary hover:bg-accent text-white px-6 py-2.5 rounded-full font-medium transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-primary/20">
+                    Get Started
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-secondary focus:outline-none" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars-staggered text-2xl"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white border-t border-slate-100 absolute w-full left-0 overflow-hidden transition-all duration-300" id="mobile-menu">
+            <ul class="px-6 py-6 space-y-4">
+                <li><a href="#" class="block text-primary font-medium">Home</a></li>
+                <li><a href="#" class="block text-secondary hover:text-primary">Services</a></li>
+                <li><a href="#" class="block text-secondary hover:text-primary">Portfolio</a></li>
+                <li><a href="#" class="block text-secondary hover:text-primary">About</a></li>
+                <li><a href="#" class="block text-secondary hover:text-primary">Contact</a></li>
+                <li class="pt-4 border-t border-slate-100">
+                    <a href="#" class="block bg-primary text-white text-center px-6 py-3 rounded-xl font-medium">Get Started</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section with Slider -->
+    <section class="relative h-screen w-full overflow-hidden pt-20">
+        <div id="hero-slider" class="h-full w-full relative">
+            
+            <!-- Slide 1 -->
+            <div class="hero-slide active">
+                <div class="absolute inset-0 bg-black/40 z-10"></div>
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover" alt="Modern Office">
+                <div class="absolute inset-0 z-20 flex items-center justify-center text-center">
+                    <div class="container">
+                        <div class="max-w-4xl mx-auto fade-in">
+                            <h1 class="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 leading-tight">Innovating Your <br><span class="text-primary italic">Digital Future</span></h1>
+                            <p class="text-lg md:text-xl text-slate-200 mb-10 max-w-2xl mx-auto leading-relaxed">We deliver cutting-edge solutions designed to elevate your business presence in the modern world.</p>
+                            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                <a href="#" class="bg-primary hover:bg-accent text-white px-8 py-4 rounded-full font-semibold transition-all shadow-xl shadow-primary/30">Explore Services</a>
+                                <a href="#" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-full font-semibold transition-all">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="hero-slide">
+                <div class="absolute inset-0 bg-black/50 z-10"></div>
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover" alt="Strategy Planning">
+                <div class="absolute inset-0 z-20 flex items-center justify-center text-center">
+                    <div class="container">
+                        <div class="max-w-4xl mx-auto">
+                            <h1 class="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 leading-tight">Strategic Thinking. <br>Exquisite Execution.</h1>
+                            <p class="text-lg md:text-xl text-slate-200 mb-10 max-w-2xl mx-auto leading-relaxed">Our team focuses on excellence to bring your wildest visions to life with precision and care.</p>
+                            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                <a href="#" class="bg-primary hover:bg-accent text-white px-8 py-4 rounded-full font-semibold transition-all shadow-xl shadow-primary/30">View Portfolio</a>
+                                <a href="#" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-full font-semibold transition-all">Our Process</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="hero-slide">
+                <div class="absolute inset-0 bg-black/45 z-10"></div>
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover" alt="Creative Team">
+                <div class="absolute inset-0 z-20 flex items-center justify-center text-center">
+                    <div class="container">
+                        <div class="max-w-4xl mx-auto">
+                            <h1 class="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 leading-tight">Collaborate With <br><span class="text-primary italic">Creatives</span></h1>
+                            <p class="text-lg md:text-xl text-slate-200 mb-10 max-w-2xl mx-auto leading-relaxed">Join forces with a global network of experts dedicated to your success.</p>
+                            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                <a href="#" class="bg-primary hover:bg-accent text-white px-8 py-4 rounded-full font-semibold transition-all shadow-xl shadow-primary/30">Contact Us</a>
+                                <a href="#" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-full font-semibold transition-all">Meet the Team</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider Controls -->
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 flex space-x-3">
+                <button class="slider-dot w-3 h-3 rounded-full bg-white/40 active" data-index="0"></button>
+                <button class="slider-dot w-3 h-3 rounded-full bg-white/40" data-index="1"></button>
+                <button class="slider-dot w-3 h-3 rounded-full bg-white/40" data-index="2"></button>
+            </div>
+            
+            <button class="absolute left-6 top-1/2 -translate-y-1/2 z-30 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white transition-all transition-colors hidden md:flex" id="prev-slide">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="absolute right-6 top-1/2 -translate-y-1/2 z-30 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white transition-all transition-colors hidden md:flex" id="next-slide">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+    <!-- Trusted Services Section -->
+    <section class="py-20 bg-white">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-primary font-heading font-bold tracking-wider text-sm uppercase mb-3">Trusted Services</h2>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-secondary">We are trusted by our customers</h3>
+                <div class="w-20 h-1 bg-primary mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Support Card -->
+                <div class="group p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-primary/20 hover:bg-white hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                    <div class="flex items-start space-x-6">
+                        <div class="w-16 h-16 shrink-0 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-headset text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-heading font-bold text-secondary mb-3">24/7 Support</h4>
+                            <div class="space-y-1">
+                                <p class="text-slate-600 font-medium">+88-02-55012009</p>
+                                <p class="text-slate-600 font-medium">01974606009</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Card -->
+                <div class="group p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-primary/20 hover:bg-white hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                    <div class="flex items-start space-x-6">
+                        <div class="w-16 h-16 shrink-0 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-award text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-heading font-bold text-secondary mb-3">Well Experienced</h4>
+                            <p class="text-slate-600 font-medium leading-relaxed">
+                                10 years of experience delivering excellence and building lasting partnerships.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quality/Trusted Card -->
+                <div class="group p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-primary/20 hover:bg-white hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                    <div class="flex items-start space-x-6">
+                        <div class="w-16 h-16 shrink-0 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-shield-halved text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-heading font-bold text-secondary mb-3">Trusted Solutions</h4>
+                            <p class="text-slate-600 font-medium leading-relaxed">
+                                Providing reliable and secure services that our customers can depend on 100%.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section class="py-24 bg-slate-50 relative overflow-hidden">
+        <!-- Section Decorative Corner -->
+        <div class="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-primary/5 rounded-bl-full -mr-16 -mt-16 pointer-events-none"></div>
+        <div class="container">
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <h2 class="text-primary font-heading font-bold tracking-wider text-sm uppercase mb-3 text-center">Our Services</h2>
+                <h3 class="text-3xl md:text-5xl font-heading font-bold text-secondary text-center">We provide the best services</h3>
+                <div class="w-24 h-1.5 bg-primary mx-auto mt-6 rounded-full opacity-80"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+                <!-- Service 1: Sigma Passenger Lift -->
+                <div class="group relative bg-white rounded-3xl shadow-sm border border-slate-100 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1687091/pexels-photo-1687091.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sigma Passenger Lift" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-heading font-bold text-secondary mb-4">Sigma Passenger Lift</h4>
+                        <p class="text-slate-600 leading-relaxed mb-6">
+                            Integrating international advanced design concepts to accelerate product innovation. We can help you determine your lifting needs.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
+                            Learn More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2: Advanced Escalator -->
+                <div class="group relative bg-white rounded-3xl shadow-sm border border-slate-100 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1545416/pexels-photo-1545416.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Advanced Escalator" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-heading font-bold text-secondary mb-4">Advanced Escalator</h4>
+                        <p class="text-slate-600 leading-relaxed mb-6">
+                            The factory has many advanced production equipment in the industry to meet the needs of mass production.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
+                            Learn More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 3: Sigma COP & LOP -->
+                <div class="group relative bg-white rounded-3xl shadow-sm border border-slate-100 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sigma COP & LOP" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-heading font-bold text-secondary mb-4">Sigma COP & LOP</h4>
+                        <p class="text-slate-600 leading-relaxed mb-6">
+                            We always adhere to the strategy of quality for development. All products are subject to multiple quality testing and strict quality control.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
+                            Learn More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 4: Landing Door -->
+                <div class="group relative bg-white rounded-3xl shadow-sm border border-slate-100 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/2251247/pexels-photo-2251247.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Landing Door" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-heading font-bold text-secondary mb-4">Landing Door</h4>
+                        <p class="text-slate-600 leading-relaxed mb-6">
+                            We always adhere to the strategy of quality for development. All products are subject to multiple quality testing and strict quality control.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
+                            Learn More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 5: CEILING -->
+                <div class="group relative bg-white rounded-3xl shadow-sm border border-slate-100 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/2085998/pexels-photo-2085998.jpeg?auto=compress&cs=tinysrgb&w=800" alt="CEILING" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-heading font-bold text-secondary mb-4">CEILING</h4>
+                        <p class="text-slate-600 leading-relaxed mb-6">
+                            We always adhere to the strategy of quality for development. All products are subject to multiple quality testing and strict quality control.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
+                            Learn More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 6: SIGMA ACCESSORIES -->
+                <div class="group relative bg-white rounded-3xl shadow-sm border border-slate-100 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1585814/pexels-photo-1585814.jpeg?auto=compress&cs=tinysrgb&w=800" alt="SIGMA ACCESSORIES" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-heading font-bold text-secondary mb-4">SIGMA ACCESSORIES</h4>
+                        <p class="text-slate-600 leading-relaxed mb-6">
+                            Sigma Elevator Spare Parts, Electrical Control Panels, Synchronous Gearless Motors, AVR & ARD Supplier, Complete Cabin, Motor Control.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
+                            Learn More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Portfolio Section -->
+    <section class="py-24 bg-white overflow-hidden">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div class="mb-8 md:mb-0">
+                    <h2 class="text-primary font-heading font-bold tracking-wider text-sm uppercase mb-3">Our Portfolio</h2>
+                    <h3 class="text-3xl md:text-5xl font-heading font-bold text-secondary">Recent Projects</h3>
+                </div>
+                <div class="w-32 h-1.5 bg-primary/20 rounded-full hidden md:block mb-4">
+                    <div class="w-12 h-full bg-primary rounded-full"></div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Portfolio Item 1: RRM Group -->
+                <div class="group relative h-96 rounded-3xl overflow-hidden cursor-pointer shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800" alt="RRM Group" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+                    <div class="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <span class="text-primary font-bold text-xs uppercase tracking-widest mb-2 opacity-0 group-hover:opacity-100 transition-opacity delay-100">Project Highlight</span>
+                        <h4 class="text-xl font-heading font-bold text-white mb-1">RRM Group</h4>
+                        <div class="h-1 w-0 group-hover:w-12 bg-primary transition-all duration-500 rounded-full"></div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2: PALMAL Group -->
+                <div class="group relative h-96 rounded-3xl overflow-hidden cursor-pointer shadow-lg mt-8 md:mt-0">
+                    <img src="https://images.unsplash.com/photo-1577412647305-991150c7d163?auto=format&fit=crop&q=80&w=800" alt="PALMAL Group" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+                    <div class="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <span class="text-primary font-bold text-xs uppercase tracking-widest mb-2 opacity-0 group-hover:opacity-100 transition-opacity delay-100">Project Highlight</span>
+                        <h4 class="text-xl font-heading font-bold text-white mb-1">PALMAL Group</h4>
+                        <div class="h-1 w-0 group-hover:w-12 bg-primary transition-all duration-500 rounded-full"></div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3: SHEPHERD Industries -->
+                <div class="group relative h-96 rounded-3xl overflow-hidden cursor-pointer shadow-lg mt-8 lg:mt-0">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680fb3ba66?auto=format&fit=crop&q=80&w=800" alt="SHEPHERD Industries" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+                    <div class="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <span class="text-primary font-bold text-xs uppercase tracking-widest mb-2 opacity-0 group-hover:opacity-100 transition-opacity delay-100">Project Highlight</span>
+                        <h4 class="text-xl font-heading font-bold text-white mb-1">SHEPHERD Industries</h4>
+                        <div class="h-1 w-0 group-hover:w-12 bg-primary transition-all duration-500 rounded-full"></div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 4: Saimon Group -->
+                <div class="group relative h-96 rounded-3xl overflow-hidden cursor-pointer shadow-lg mt-8 lg:mt-0">
+                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=800" alt="Saimon Group" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+                    <div class="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <span class="text-primary font-bold text-xs uppercase tracking-widest mb-2 opacity-0 group-hover:opacity-100 transition-opacity delay-100">Project Highlight</span>
+                        <h4 class="text-xl font-heading font-bold text-white mb-1">Saimon Group</h4>
+                        <div class="h-1 w-0 group-hover:w-12 bg-primary transition-all duration-500 rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Our Media Coverage Section -->
+    <section class="py-24 bg-slate-50 overflow-hidden">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-primary font-heading font-bold tracking-wider text-sm uppercase mb-3">News & Press</h2>
+                <h3 class="text-3xl md:text-5xl font-heading font-bold text-secondary mb-6">Our Media Coverage</h3>
+                <p class="text-slate-600 max-w-2xl mx-auto leading-relaxed">Stay updated with the latest news, events, and press releases about Arob Group's presence in the industry.</p>
+                <div class="w-24 h-1.5 bg-primary/20 mx-auto mt-8 rounded-full overflow-hidden">
+                    <div class="h-full w-12 bg-primary rounded-full"></div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Media Item 1 -->
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border border-slate-100">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Media Coverage" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Press Release</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center space-x-3 mb-4 text-xs font-bold text-slate-400 uppercase tracking-widest">
+                            <span class="text-primary">Financial Express</span>
+                            <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+                            <span>Oct 24, 2025</span>
+                        </div>
+                        <h4 class="text-xl font-heading font-bold text-secondary mb-4 group-hover:text-primary transition-colors line-clamp-2">Arob Group sets new benchmark in elevator technology innovation.</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6 line-clamp-3">
+                            Implementing high-speed smart elevators in the capital's newest corporate towers, focusing on zero-friction energy efficiency.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-sm font-bold text-primary group-hover:gap-2 transition-all">
+                            View Article <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Media Item 2 -->
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border border-slate-100">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Media Coverage" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Award</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center space-x-3 mb-4 text-xs font-bold text-slate-400 uppercase tracking-widest">
+                            <span class="text-primary">The Daily Star</span>
+                            <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+                            <span>Sep 12, 2025</span>
+                        </div>
+                        <h4 class="text-xl font-heading font-bold text-secondary mb-4 group-hover:text-primary transition-colors line-clamp-2">Excellence in Engineering Award 2025 goes to Arob Group.</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6 line-clamp-3">
+                            Recognized for the outstanding contribution to vertical transportation solutions and safety standards in the manufacturing sector.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-sm font-bold text-primary group-hover:gap-2 transition-all">
+                            View Article <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Media Item 3 -->
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border border-slate-100">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1181395/pexels-photo-1181395.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Media Coverage" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Event</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center space-x-3 mb-4 text-xs font-bold text-slate-400 uppercase tracking-widest">
+                            <span class="text-primary">Dhaka Tribune</span>
+                            <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+                            <span>Aug 05, 2025</span>
+                        </div>
+                        <h4 class="text-xl font-heading font-bold text-secondary mb-4 group-hover:text-primary transition-colors line-clamp-2">Arob Group holds international seminar on modern urban mobility.</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6 line-clamp-3">
+                            Experts from around the world gathered to discuss the future of cities and the role of intelligent lift systems in high-rise buildings.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-sm font-bold text-primary group-hover:gap-2 transition-all">
+                            View Article <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 bg-white overflow-hidden relative">
+        <!-- Decorative Background Element -->
+        <div class="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="container relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <h2 class="text-primary font-heading font-bold tracking-wider text-sm uppercase mb-3 text-center">Testimonials</h2>
+                <h3 class="text-3xl md:text-5xl font-heading font-bold text-secondary text-center">What clients are say</h3>
+                <div class="w-24 h-1.5 bg-primary/20 mx-auto mt-6 rounded-full overflow-hidden">
+                    <div class="h-full w-12 bg-primary rounded-full"></div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="group bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border border-slate-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-1 mb-6">
+                            <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+                        </div>
+                        <div class="relative mb-8">
+                            <i class="fa-solid fa-quote-left text-5xl text-slate-100 absolute -top-4 -left-2 z-0"></i>
+                            <p class="text-slate-600 italic leading-relaxed relative z-10">
+                                "Arob Group translated our complex vision into a seamless reality. Their attention to detail in elevator engineering is truly world-class. Highly recommended for corporate projects."
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4 border-t border-slate-100 pt-8">
+                        <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Client" class="w-14 h-14 rounded-2xl object-cover shadow-lg border-2 border-white">
+                        <div>
+                            <h4 class="text-lg font-heading font-bold text-secondary">Ahmed Zulfiqar</h4>
+                            <p class="text-xs font-bold text-primary uppercase tracking-widest">MD, RRM Group</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="group bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border border-slate-100 flex flex-col justify-between mt-8 md:mt-0">
+                    <div>
+                        <div class="flex items-center space-x-1 mb-6">
+                            <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+                        </div>
+                        <div class="relative mb-8">
+                            <i class="fa-solid fa-quote-left text-5xl text-slate-100 absolute -top-4 -left-2 z-0"></i>
+                            <p class="text-slate-600 italic leading-relaxed relative z-10">
+                                "The technical support and reliability of their escalator systems are unmatched. Working with Arob Group has significantly improved our building's accessibility."
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4 border-t border-slate-100 pt-8">
+                        <img src="https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Client" class="w-14 h-14 rounded-2xl object-cover shadow-lg border-2 border-white">
+                        <div>
+                            <h4 class="text-lg font-heading font-bold text-secondary">Sharmin Akter</h4>
+                            <p class="text-xs font-bold text-primary uppercase tracking-widest">Head of Operations, PALMAL</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="group bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border border-slate-100 flex flex-col justify-between mt-8 lg:mt-0">
+                    <div>
+                        <div class="flex items-center space-x-1 mb-6">
+                            <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+                        </div>
+                        <div class="relative mb-8">
+                            <i class="fa-solid fa-quote-left text-5xl text-slate-100 absolute -top-4 -left-2 z-0"></i>
+                            <p class="text-slate-600 italic leading-relaxed relative z-10">
+                                "Professionalism, precision, and punctuality. Arob Group delivered our industrial lift project ahead of schedule with zero compromise on safety."
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4 border-t border-slate-100 pt-8">
+                        <img src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Client" class="w-14 h-14 rounded-2xl object-cover shadow-lg border-2 border-white">
+                        <div>
+                            <h4 class="text-lg font-heading font-bold text-secondary">Robert Hasan</h4>
+                            <p class="text-xs font-bold text-primary uppercase tracking-widest">Director, SHEPHERD Industries</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0f172a] text-slate-400 py-24 relative overflow-hidden">
+        <!-- Decorative Background Glow -->
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -mr-64 -mt-64"></div>
+        
+        <div class="container relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+                <!-- Branding & About -->
+                <div class="space-y-8">
+                    <a href="#" class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
+                            <span class="text-white font-heading font-bold text-2xl tracking-tighter text-shadow-sm">A</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-2xl font-heading font-bold tracking-tight text-white leading-none">AROB</span>
+                            <span class="text-xs font-bold tracking-[0.2em] text-primary uppercase">Group</span>
+                        </div>
+                    </a>
+                    <p class="text-slate-400 leading-relaxed text-sm">
+                        Leading the industry with high-speed elevator innovations and advanced vertical transportation solutions. Building the future, one floor at a time.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white hover:bg-primary hover:border-primary transition-all duration-300">
+                            <i class="fa-brands fa-facebook-f text-sm"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white hover:bg-primary hover:border-primary transition-all duration-300">
+                            <i class="fa-brands fa-twitter text-sm"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white hover:bg-primary hover:border-primary transition-all duration-300">
+                            <i class="fa-brands fa-linkedin-in text-sm"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white hover:bg-primary hover:border-primary transition-all duration-300">
+                            <i class="fa-brands fa-instagram text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Navigation -->
+                <div>
+                    <h3 class="text-white font-heading font-bold text-lg mb-8 relative inline-block">
+                        Quick Links
+                        <span class="absolute -bottom-2 left-0 w-8 h-1 bg-primary rounded-full"></span>
+                    </h3>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="group flex items-center hover:text-white transition-colors">
+                            <span class="w-0 group-hover:w-4 h-0.5 bg-primary mr-0 group-hover:mr-2 transition-all duration-300 rounded-full"></span>
+                            Home
+                        </a></li>
+                        <li><a href="#" class="group flex items-center hover:text-white transition-colors">
+                            <span class="w-0 group-hover:w-4 h-0.5 bg-primary mr-0 group-hover:mr-2 transition-all duration-300 rounded-full"></span>
+                            Our Services
+                        </a></li>
+                        <li><a href="#" class="group flex items-center hover:text-white transition-colors">
+                            <span class="w-0 group-hover:w-4 h-0.5 bg-primary mr-0 group-hover:mr-2 transition-all duration-300 rounded-full"></span>
+                            Recent Projects
+                        </a></li>
+                        <li><a href="#" class="group flex items-center hover:text-white transition-colors">
+                            <span class="w-0 group-hover:w-4 h-0.5 bg-primary mr-0 group-hover:mr-2 transition-all duration-300 rounded-full"></span>
+                            Our Portfolio
+                        </a></li>
+                        <li><a href="#" class="group flex items-center hover:text-white transition-colors">
+                            <span class="w-0 group-hover:w-4 h-0.5 bg-primary mr-0 group-hover:mr-2 transition-all duration-300 rounded-full"></span>
+                            Media Coverage
+                        </a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Support -->
+                <div>
+                    <h3 class="text-white font-heading font-bold text-lg mb-8 relative inline-block">
+                        Contact Info
+                        <span class="absolute -bottom-2 left-0 w-8 h-1 bg-primary rounded-full"></span>
+                    </h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-start space-x-4">
+                            <div class="w-10 h-10 shrink-0 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-primary">
+                                <i class="fa-solid fa-location-dot text-sm"></i>
+                            </div>
+                            <span class="text-sm leading-relaxed">House #36, Road #10, Block #D, Niketan, Gulshan-1, Dhaka-1212</span>
+                        </li>
+                        <li class="flex items-center space-x-4">
+                            <div class="w-10 h-10 shrink-0 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-primary">
+                                <i class="fa-solid fa-phone text-sm"></i>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-sm text-white font-medium">+88-02-55012009</span>
+                                <span class="text-xs text-slate-500">Mon-Fri: 9am - 6pm</span>
+                            </div>
+                        </li>
+                        <li class="flex items-center space-x-4">
+                            <div class="w-10 h-10 shrink-0 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-primary">
+                                <i class="fa-solid fa-envelope text-sm"></i>
+                            </div>
+                            <span class="text-sm text-white font-medium">info@arobgroup.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="space-y-8">
+                    <h3 class="text-white font-heading font-bold text-lg mb-8 relative inline-block">
+                        Newsletter
+                        <span class="absolute -bottom-2 left-0 w-8 h-1 bg-primary rounded-full"></span>
+                    </h3>
+                    <p class="text-sm leading-relaxed">Subscribe to get the latest updates and industry news delivered to your inbox.</p>
+                    <div class="relative">
+                        <input type="email" placeholder="Your email address" class="w-full bg-white/5 border border-white/10 rounded-2xl py-4 pl-6 pr-16 text-sm text-white focus:outline-none focus:border-primary transition-colors">
+                        <button class="absolute right-2 top-2 bottom-2 w-12 bg-primary hover:bg-accent text-white rounded-xl transition-all flex items-center justify-center shadow-lg shadow-primary/20">
+                            <i class="fa-solid fa-paper-plane text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 text-xs">
+                <p>&copy; <span id="current-year"></span>  <a href="https://muktodharaltd.com/" target="_blank" class="text-primary hover:text-white font-bold transition-colors">Muktodhara Technology Ltd</a>. All rights reserved. Developed by</p>
+                <div class="flex items-center space-x-8">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition-colors">Customer Support</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global Scripts -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

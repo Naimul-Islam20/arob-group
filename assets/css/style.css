@@ -1,0 +1,97 @@
+:root {
+    /* Color Palette */
+    --color-primary: #2563eb;
+    --color-secondary: #1e293b;
+    --color-accent: #3b82f6;
+    
+    /* Layout */
+    --container-max-width: 1440px;
+}
+
+/* Custom Global Container */
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    max-width: var(--container-max-width);
+}
+
+/* Responsive Container Padding */
+@media (min-width: 640px) {
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+@media (min-width: 1536px) {
+    .container {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+}
+
+/* Existing Styles & Animations */
+
+/* Slider Dots */
+.slider-dot.active {
+    background-color: white;
+    width: 2rem;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* Hero Slider */
+.hero-slide {
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    z-index: 0;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    z-index: 10;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent);
+}
