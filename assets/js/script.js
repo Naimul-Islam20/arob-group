@@ -33,9 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (header) {
             if (window.scrollY > 50) {
                 header.classList.add('py-2', 'bg-white/95');
-                header.classList.remove('py-4', 'bg-white/80');
+                header.classList.remove('py-3', 'bg-white/80');
             } else {
-                header.classList.add('py-4', 'bg-white/80');
+                header.classList.add('py-3', 'bg-white/80');
                 header.classList.remove('py-2', 'bg-white/95');
             }
         }
