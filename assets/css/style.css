@@ -42,10 +42,39 @@
 
 /* Existing Styles & Animations */
 
-/* Slider Dots */
+/* Slider Dots Progress Style */
+.slider-dot {
+    width: 60px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.slider-dot .progress-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
 .slider-dot.active {
-    background-color: white;
-    width: 2rem;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.slider-dot.active .progress-fill {
+    animation: progressFill 5s linear forwards;
+}
+
+@keyframes progressFill {
+    from { width: 0%; }
+    to { width: 100%; }
 }
 
 /* Animations */

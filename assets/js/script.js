@@ -55,8 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
             slides.forEach((slide, i) => {
                 slide.classList.remove('active');
                 if (dots[i]) {
-                    dots[i].classList.remove('active', 'bg-white');
-                    dots[i].classList.add('bg-white/40');
+                    dots[i].classList.remove('active');
                 }
                 
                 const content = slide.querySelector('.max-w-4xl');
@@ -67,8 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             slides[index].classList.add('active');
             if (dots[index]) {
-                dots[index].classList.add('active', 'bg-white');
-                dots[index].classList.remove('bg-white/40');
+                dots[index].classList.add('active');
             }
             
             setTimeout(() => {
