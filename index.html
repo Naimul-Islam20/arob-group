@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arob Group | Modern & Elegant Solutions</title>
-    <meta name="description" content="Arob Group - Providing modern and elegant solutions for all your business needs. Clean, responsive, and professional.">
+    <title>Arop Group | Modern & Elegant Solutions</title>
+    <meta name="description" content="Arop Group - Providing modern and elegant solutions for all your business needs. Clean, responsive, and professional.">
     
     <!-- Tailwind CSS v3 Play CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -23,31 +23,32 @@
 <body class="font-sans text-secondary bg-slate-50 overflow-x-hidden">
 
     <!-- Header / Navbar -->
-    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-md shadow-sm" id="main-header">
-        <nav class="container py-5 flex items-center justify-between">
+    <header class="sticky top-0 left-0 w-full z-50 transition-all duration-300 bg-white shadow-sm" id="main-header">
+        <nav class="container py-6 flex items-center justify-between">
             <!-- Logo -->
-            <a href="#" class="flex items-center space-x-2">
+            <a href="index.html" class="flex items-center space-x-2">
                 <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
                     <span class="text-white font-heading font-bold text-xl">A</span>
                 </div>
-                <span class="text-2xl font-heading font-bold tracking-tight text-secondary">AROB <span class="text-primary">GROUP</span></span>
+                <span class="text-2xl font-heading font-bold tracking-tight text-secondary uppercase">AROP <span class="text-primary">GROUP</span></span>
             </a>
 
             <!-- Desktop Navigation -->
-            <ul class="hidden md:flex space-x-8 text-md font-medium">
-                <li><a href="#" class="text-primary hover:text-accent transition-colors">Home</a></li>
-                <li><a href="#" class="text-secondary hover:text-primary transition-colors">Services</a></li>
-                <li><a href="#" class="text-secondary hover:text-primary transition-colors">Portfolio</a></li>
-                <li><a href="#" class="text-secondary hover:text-primary transition-colors">About</a></li>
-                <li><a href="#" class="text-secondary hover:text-primary transition-colors">Contact</a></li>
+            <ul class="hidden md:flex space-x-10 text-sm font-bold uppercase tracking-widest">
+                <li><a href="index.html" class="text-primary hover:text-accent transition-colors border-b-2 border-primary pb-1">Home</a></li>
+                <!-- About Us Dropdown -->
+                <li class="relative group">
+                    <a href="#" class="flex items-center text-secondary hover:text-primary transition-colors">
+                        About Us <i class="fa-solid fa-chevron-down ml-1.5 text-[10px] transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="dropdown-menu absolute top-full left-0 w-52 bg-white shadow-2xl rounded-xl py-4 border border-slate-50 mt-2 z-[60]">
+                        <a href="message-for-md.html" class="block px-6 py-2.5 text-[11px] text-secondary hover:text-primary hover:bg-slate-50 transition-all">Message for MD</a>
+                        <a href="all-news.html" class="block px-6 py-2.5 text-[11px] text-secondary hover:text-primary hover:bg-slate-50 transition-all">All News</a>
+                    </div>
+                </li>
+                <li><a href="#services" class="text-secondary hover:text-primary transition-colors">Services</a></li>
+                <li><a href="contact.html" class="text-secondary hover:text-primary transition-colors">Contact</a></li>
             </ul>
-
-            <!-- CTA Button -->
-            <div class="hidden md:block">
-                <a href="#" class="bg-primary hover:bg-accent text-white px-6 py-2.5 rounded-full font-medium transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-primary/20">
-                    Get Started
-                </a>
-            </div>
 
             <!-- Mobile Menu Toggle -->
             <button class="md:hidden text-secondary focus:outline-none" id="mobile-menu-btn">
@@ -56,22 +57,24 @@
         </nav>
 
         <!-- Mobile Menu -->
-        <div class="md:hidden hidden bg-white border-t border-slate-100 absolute w-full left-0 overflow-hidden transition-all duration-300" id="mobile-menu">
-            <ul class="px-6 py-6 space-y-4">
-                <li><a href="#" class="block text-primary font-medium">Home</a></li>
-                <li><a href="#" class="block text-secondary hover:text-primary">Services</a></li>
-                <li><a href="#" class="block text-secondary hover:text-primary">Portfolio</a></li>
-                <li><a href="#" class="block text-secondary hover:text-primary">About</a></li>
-                <li><a href="#" class="block text-secondary hover:text-primary">Contact</a></li>
-                <li class="pt-4 border-t border-slate-100">
-                    <a href="#" class="block bg-primary text-white text-center px-6 py-3 rounded-xl font-medium">Get Started</a>
+        <div class="md:hidden hidden bg-white border-t border-slate-100 absolute w-full left-0 overflow-hidden transition-all duration-300 shadow-xl" id="mobile-menu">
+            <ul class="px-6 py-6 space-y-4 text-xs font-semibold uppercase tracking-widest">
+                <li><a href="index.html" class="block text-primary">Home</a></li>
+                <li class="space-y-3">
+                    <span class="block text-slate-400 text-[10px]">About Us</span>
+                    <ul class="pl-4 space-y-3">
+                        <li><a href="message-for-md.html" class="block text-secondary hover:text-primary">Message for MD</a></li>
+                        <li><a href="all-news.html" class="block text-secondary hover:text-primary">All News</a></li>
+                    </ul>
                 </li>
+                <li><a href="#services" class="block text-secondary hover:text-primary">Services</a></li>
+                <li><a href="contact.html" class="block text-secondary hover:text-primary">Contact</a></li>
             </ul>
         </div>
     </header>
 
     <!-- Hero Section with Slider -->
-    <section class="relative h-screen w-full overflow-hidden pt-20">
+    <section class="relative h-[90vh] w-full overflow-hidden">
         <div id="hero-slider" class="h-full w-full relative">
             
             <!-- Slide 1 -->
@@ -206,7 +209,8 @@
     </section>
 
     <!-- Our Services Section -->
-    <section class="py-24 bg-slate-50 relative overflow-hidden">
+    <!-- Our Services Section -->
+    <section id="services" class="py-24 bg-slate-50 relative overflow-hidden">
         <!-- Section Decorative Corner -->
         <div class="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-primary/5 rounded-bl-full -mr-16 -mt-16 pointer-events-none"></div>
         <div class="container">
@@ -224,11 +228,11 @@
                         <img src="https://images.pexels.com/photos/1687091/pexels-photo-1687091.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sigma Passenger Lift" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                     </div>
                     <div class="p-8">
-                        <h4 class="text-2xl font-heading font-bold text-secondary mb-4">Sigma Passenger Lift</h4>
+                        <h4 class="text-2xl font-heading font-bold text-secondary mb-4 hover:text-primary transition-colors cursor-pointer"><a href="sigma-passenger-lift.html">Sigma Passenger Lift</a></h4>
                         <p class="text-slate-600 leading-relaxed mb-6">
                             Integrating international advanced design concepts to accelerate product innovation. We can help you determine your lifting needs.
                         </p>
-                        <a href="#" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
+                        <a href="sigma-passenger-lift.html" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
                             Learn More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
                         </a>
                     </div>
@@ -240,11 +244,11 @@
                         <img src="https://images.pexels.com/photos/1545416/pexels-photo-1545416.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Advanced Escalator" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                     </div>
                     <div class="p-8">
-                        <h4 class="text-2xl font-heading font-bold text-secondary mb-4">Advanced Escalator</h4>
+                        <h4 class="text-2xl font-heading font-bold text-secondary mb-4 hover:text-primary transition-colors cursor-pointer"><a href="advanced-escalator.html">Advanced Escalator</a></h4>
                         <p class="text-slate-600 leading-relaxed mb-6">
                             The factory has many advanced production equipment in the industry to meet the needs of mass production.
                         </p>
-                        <a href="#" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
+                        <a href="advanced-escalator.html" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
                             Learn More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
                         </a>
                     </div>
@@ -256,11 +260,11 @@
                         <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sigma COP & LOP" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                     </div>
                     <div class="p-8">
-                        <h4 class="text-2xl font-heading font-bold text-secondary mb-4">Sigma COP & LOP</h4>
+                        <h4 class="text-2xl font-heading font-bold text-secondary mb-4 hover:text-primary transition-colors cursor-pointer"><a href="sigma-cop-lop.html">Sigma COP & LOP</a></h4>
                         <p class="text-slate-600 leading-relaxed mb-6">
                             We always adhere to the strategy of quality for development. All products are subject to multiple quality testing and strict quality control.
                         </p>
-                        <a href="#" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
+                        <a href="sigma-cop-lop.html" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
                             Learn More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
                         </a>
                     </div>
@@ -272,11 +276,11 @@
                         <img src="https://images.pexels.com/photos/2251247/pexels-photo-2251247.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Landing Door" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                     </div>
                     <div class="p-8">
-                        <h4 class="text-2xl font-heading font-bold text-secondary mb-4">Landing Door</h4>
+                        <h4 class="text-2xl font-heading font-bold text-secondary mb-4 hover:text-primary transition-colors cursor-pointer"><a href="landing-door.html">Landing Door</a></h4>
                         <p class="text-slate-600 leading-relaxed mb-6">
                             We always adhere to the strategy of quality for development. All products are subject to multiple quality testing and strict quality control.
                         </p>
-                        <a href="#" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
+                        <a href="landing-door.html" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
                             Learn More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
                         </a>
                     </div>
@@ -288,11 +292,11 @@
                         <img src="https://images.pexels.com/photos/2085998/pexels-photo-2085998.jpeg?auto=compress&cs=tinysrgb&w=800" alt="CEILING" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                     </div>
                     <div class="p-8">
-                        <h4 class="text-2xl font-heading font-bold text-secondary mb-4">CEILING</h4>
+                        <h4 class="text-2xl font-heading font-bold text-secondary mb-4 hover:text-primary transition-colors cursor-pointer"><a href="ceiling.html">CEILING</a></h4>
                         <p class="text-slate-600 leading-relaxed mb-6">
                             We always adhere to the strategy of quality for development. All products are subject to multiple quality testing and strict quality control.
                         </p>
-                        <a href="#" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
+                        <a href="ceiling.html" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
                             Learn More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
                         </a>
                     </div>
@@ -304,11 +308,11 @@
                         <img src="https://images.pexels.com/photos/1585814/pexels-photo-1585814.jpeg?auto=compress&cs=tinysrgb&w=800" alt="SIGMA ACCESSORIES" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                     </div>
                     <div class="p-8">
-                        <h4 class="text-2xl font-heading font-bold text-secondary mb-4">SIGMA ACCESSORIES</h4>
+                        <h4 class="text-2xl font-heading font-bold text-secondary mb-4 hover:text-primary transition-colors cursor-pointer"><a href="sigma-accessories.html">SIGMA ACCESSORIES</a></h4>
                         <p class="text-slate-600 leading-relaxed mb-6">
                             Sigma Elevator Spare Parts, Electrical Control Panels, Synchronous Gearless Motors, AVR & ARD Supplier, Complete Cabin, Motor Control.
                         </p>
-                        <a href="#" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
+                        <a href="sigma-accessories.html" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
                             Learn More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
                         </a>
                     </div>
@@ -318,7 +322,8 @@
     </section>
 
     <!-- Our Portfolio Section -->
-    <section class="py-24 bg-white overflow-hidden">
+    <!-- Our Portfolio Section -->
+    <section id="portfolio" class="py-24 bg-white overflow-hidden">
         <div class="container">
             <!-- Section Header -->
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
@@ -379,13 +384,14 @@
         </div>
     </section>
     <!-- Our Media Coverage Section -->
-    <section class="py-24 bg-slate-50 overflow-hidden">
+    <!-- Our Media Coverage Section -->
+    <section id="news" class="py-24 bg-slate-50 overflow-hidden">
         <div class="container">
             <!-- Section Header -->
             <div class="text-center mb-16">
                 <h2 class="text-primary font-heading font-bold tracking-wider text-sm uppercase mb-3">News & Press</h2>
                 <h3 class="text-3xl md:text-5xl font-heading font-bold text-secondary mb-6">Our Media Coverage</h3>
-                <p class="text-slate-600 max-w-2xl mx-auto leading-relaxed">Stay updated with the latest news, events, and press releases about Arob Group's presence in the industry.</p>
+                <p class="text-slate-600 max-w-2xl mx-auto leading-relaxed">Stay updated with the latest news, events, and press releases about Arop Group's presence in the industry.</p>
                 <div class="w-24 h-1.5 bg-primary/20 mx-auto mt-8 rounded-full overflow-hidden">
                     <div class="h-full w-12 bg-primary rounded-full"></div>
                 </div>
@@ -406,11 +412,11 @@
                             <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
                             <span>Oct 24, 2025</span>
                         </div>
-                        <h4 class="text-xl font-heading font-bold text-secondary mb-4 group-hover:text-primary transition-colors line-clamp-2">Arob Group sets new benchmark in elevator technology innovation.</h4>
+                        <h4 class="text-xl font-heading font-bold text-secondary mb-4 hover:text-primary transition-colors line-clamp-2 cursor-pointer"><a href="news-benchmark.html">Arop Group sets new benchmark in elevator technology innovation.</a></h4>
                         <p class="text-slate-600 text-sm leading-relaxed mb-6 line-clamp-3">
                             Implementing high-speed smart elevators in the capital's newest corporate towers, focusing on zero-friction energy efficiency.
                         </p>
-                        <a href="#" class="inline-flex items-center text-sm font-bold text-primary group-hover:gap-2 transition-all">
+                        <a href="news-benchmark.html" class="inline-flex items-center text-sm font-bold text-primary group-hover:gap-2 transition-all">
                             View Article <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
                         </a>
                     </div>
@@ -430,11 +436,11 @@
                             <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
                             <span>Sep 12, 2025</span>
                         </div>
-                        <h4 class="text-xl font-heading font-bold text-secondary mb-4 group-hover:text-primary transition-colors line-clamp-2">Excellence in Engineering Award 2025 goes to Arob Group.</h4>
+                        <h4 class="text-xl font-heading font-bold text-secondary mb-4 hover:text-primary transition-colors line-clamp-2 cursor-pointer"><a href="news-award.html">Excellence in Engineering Award 2025 goes to Arop Group.</a></h4>
                         <p class="text-slate-600 text-sm leading-relaxed mb-6 line-clamp-3">
                             Recognized for the outstanding contribution to vertical transportation solutions and safety standards in the manufacturing sector.
                         </p>
-                        <a href="#" class="inline-flex items-center text-sm font-bold text-primary group-hover:gap-2 transition-all">
+                        <a href="news-award.html" class="inline-flex items-center text-sm font-bold text-primary group-hover:gap-2 transition-all">
                             View Article <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
                         </a>
                     </div>
@@ -454,11 +460,11 @@
                             <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
                             <span>Aug 05, 2025</span>
                         </div>
-                        <h4 class="text-xl font-heading font-bold text-secondary mb-4 group-hover:text-primary transition-colors line-clamp-2">Arob Group holds international seminar on modern urban mobility.</h4>
+                        <h4 class="text-xl font-heading font-bold text-secondary mb-4 hover:text-primary transition-colors line-clamp-2 cursor-pointer"><a href="news-seminar.html">Arop Group holds international seminar on modern urban mobility.</a></h4>
                         <p class="text-slate-600 text-sm leading-relaxed mb-6 line-clamp-3">
                             Experts from around the world gathered to discuss the future of cities and the role of intelligent lift systems in high-rise buildings.
                         </p>
-                        <a href="#" class="inline-flex items-center text-sm font-bold text-primary group-hover:gap-2 transition-all">
+                        <a href="news-seminar.html" class="inline-flex items-center text-sm font-bold text-primary group-hover:gap-2 transition-all">
                             View Article <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
                         </a>
                     </div>
@@ -497,7 +503,7 @@
                         <div class="relative mb-8">
                             <i class="fa-solid fa-quote-left text-5xl text-slate-100 absolute -top-4 -left-2 z-0"></i>
                             <p class="text-slate-600 italic leading-relaxed relative z-10">
-                                "Arob Group translated our complex vision into a seamless reality. Their attention to detail in elevator engineering is truly world-class. Highly recommended for corporate projects."
+                                "Arop Group translated our complex vision into a seamless reality. Their attention to detail in elevator engineering is truly world-class. Highly recommended for corporate projects."
                             </p>
                         </div>
                     </div>
@@ -523,7 +529,7 @@
                         <div class="relative mb-8">
                             <i class="fa-solid fa-quote-left text-5xl text-slate-100 absolute -top-4 -left-2 z-0"></i>
                             <p class="text-slate-600 italic leading-relaxed relative z-10">
-                                "The technical support and reliability of their escalator systems are unmatched. Working with Arob Group has significantly improved our building's accessibility."
+                                "The technical support and reliability of their escalator systems are unmatched. Working with Arop Group has significantly improved our building's accessibility."
                             </p>
                         </div>
                     </div>
@@ -549,7 +555,7 @@
                         <div class="relative mb-8">
                             <i class="fa-solid fa-quote-left text-5xl text-slate-100 absolute -top-4 -left-2 z-0"></i>
                             <p class="text-slate-600 italic leading-relaxed relative z-10">
-                                "Professionalism, precision, and punctuality. Arob Group delivered our industrial lift project ahead of schedule with zero compromise on safety."
+                                "Professionalism, precision, and punctuality. Arop Group delivered our industrial lift project ahead of schedule with zero compromise on safety."
                             </p>
                         </div>
                     </div>
@@ -566,7 +572,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#0f172a] text-slate-400 py-24 relative overflow-hidden">
+    <footer class="bg-[#0f172a] text-slate-400 pt-24 pb-0 relative overflow-hidden">
         <!-- Decorative Background Glow -->
         <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -mr-64 -mt-64"></div>
         
@@ -579,7 +585,7 @@
                             <span class="text-white font-heading font-bold text-2xl tracking-tighter text-shadow-sm">A</span>
                         </div>
                         <div class="flex flex-col">
-                            <span class="text-2xl font-heading font-bold tracking-tight text-white leading-none">AROB</span>
+                            <span class="text-2xl font-heading font-bold tracking-tight text-white leading-none">AROP</span>
                             <span class="text-xs font-bold tracking-[0.2em] text-primary uppercase">Group</span>
                         </div>
                     </a>
@@ -609,23 +615,19 @@
                         <span class="absolute -bottom-2 left-0 w-8 h-1 bg-primary rounded-full"></span>
                     </h3>
                     <ul class="space-y-4">
-                        <li><a href="#" class="group flex items-center hover:text-white transition-colors">
+                        <li><a href="index.html" class="group flex items-center hover:text-white transition-colors">
                             <span class="w-0 group-hover:w-4 h-0.5 bg-primary mr-0 group-hover:mr-2 transition-all duration-300 rounded-full"></span>
                             Home
                         </a></li>
-                        <li><a href="#" class="group flex items-center hover:text-white transition-colors">
+                        <li><a href="#services" class="group flex items-center hover:text-white transition-colors">
                             <span class="w-0 group-hover:w-4 h-0.5 bg-primary mr-0 group-hover:mr-2 transition-all duration-300 rounded-full"></span>
                             Our Services
                         </a></li>
-                        <li><a href="#" class="group flex items-center hover:text-white transition-colors">
-                            <span class="w-0 group-hover:w-4 h-0.5 bg-primary mr-0 group-hover:mr-2 transition-all duration-300 rounded-full"></span>
-                            Recent Projects
-                        </a></li>
-                        <li><a href="#" class="group flex items-center hover:text-white transition-colors">
+                        <li><a href="#portfolio" class="group flex items-center hover:text-white transition-colors">
                             <span class="w-0 group-hover:w-4 h-0.5 bg-primary mr-0 group-hover:mr-2 transition-all duration-300 rounded-full"></span>
                             Our Portfolio
                         </a></li>
-                        <li><a href="#" class="group flex items-center hover:text-white transition-colors">
+                        <li><a href="#news" class="group flex items-center hover:text-white transition-colors">
                             <span class="w-0 group-hover:w-4 h-0.5 bg-primary mr-0 group-hover:mr-2 transition-all duration-300 rounded-full"></span>
                             Media Coverage
                         </a></li>
@@ -633,7 +635,7 @@
                 </div>
 
                 <!-- Contact & Support -->
-                <div>
+                <div id="contact">
                     <h3 class="text-white font-heading font-bold text-lg mb-8 relative inline-block">
                         Contact Info
                         <span class="absolute -bottom-2 left-0 w-8 h-1 bg-primary rounded-full"></span>
@@ -680,7 +682,7 @@
             </div>
 
             <!-- Bottom Bar -->
-            <div class="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 text-xs">
+            <div class="pt-6 pb-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 text-xs">
                 <p>&copy; <span id="current-year"></span>  <a href="https://muktodharaltd.com/" target="_blank" class="text-primary hover:text-white font-bold transition-colors">Muktodhara Technology Ltd</a>. All rights reserved. Developed by</p>
                 <div class="flex items-center space-x-8">
                     <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>

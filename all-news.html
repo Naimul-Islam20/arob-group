@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All News & Press | Arop Group</title>
+    
+    <!-- Tailwind CSS v3 Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Global Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-sans text-slate-800 bg-white antialiased">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 left-0 w-full z-50 transition-all duration-300 bg-white shadow-sm" id="main-header">
+        <nav class="container py-6 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                    <span class="text-white font-heading font-bold text-xl">A</span>
+                </div>
+                <span class="text-2xl font-heading font-bold tracking-tight text-secondary uppercase">AROP <span class="text-primary">GROUP</span></span>
+            </a>
+
+            <ul class="hidden md:flex space-x-10 text-sm font-bold uppercase tracking-widest">
+                <li><a href="index.html" class="text-secondary hover:text-primary transition-colors">Home</a></li>
+                <li class="relative group">
+                    <a href="#" class="flex items-center text-primary border-b-2 border-primary pb-1 font-bold">
+                        About Us <i class="fa-solid fa-chevron-down ml-1.5 text-[10px]"></i>
+                    </a>
+                    <div class="dropdown-menu absolute top-full left-0 w-52 bg-white shadow-2xl rounded-xl py-4 border border-slate-50 mt-2 z-[60]">
+                        <a href="message-for-md.html" class="block px-6 py-2.5 text-[11px] text-secondary hover:text-primary hover:bg-slate-50 transition-all">Message for MD</a>
+                        <a href="all-news.html" class="block px-6 py-2.5 text-[11px] text-primary bg-slate-50">All News</a>
+                    </div>
+                </li>
+                <li><a href="index.html#services" class="text-secondary hover:text-primary transition-colors">Services</a></li>
+                <li><a href="contact.html" class="text-secondary hover:text-primary transition-colors">Contact</a></li>
+            </ul>
+
+            <button class="md:hidden text-secondary focus:outline-none" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars-staggered text-2xl"></i>
+            </button>
+        </nav>
+        
+        <div class="md:hidden hidden bg-white border-t border-slate-100 absolute w-full left-0 overflow-hidden transition-all duration-300 shadow-xl" id="mobile-menu">
+            <ul class="px-6 py-6 space-y-4 text-xs font-semibold uppercase tracking-widest">
+                <li><a href="index.html" class="block text-secondary">Home</a></li>
+                <li class="space-y-3">
+                    <span class="block text-primary text-[10px]">About Us</span>
+                    <ul class="pl-4 space-y-3">
+                        <li><a href="message-for-md.html" class="block text-secondary">Message for MD</a></li>
+                        <li><a href="all-news.html" class="block text-primary">All News</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#services" class="block text-secondary">Services</a></li>
+                <li><a href="contact.html" class="block text-secondary">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="bg-secondary py-24 relative overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-10">
+            <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1200" class="w-full h-full object-cover">
+        </div>
+        <div class="container relative z-10 text-center">
+            <h1 class="text-4xl md:text-6xl font-heading font-bold text-white mb-6">Latest News & Press</h1>
+            <p class="text-lg text-slate-400 max-w-2xl mx-auto">Stay updated with the latest breakthroughs, awards, and events from Arop Group.</p>
+        </div>
+    </section>
+
+    <!-- News Grid -->
+    <section class="py-24 bg-slate-50">
+        <div class="container">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                
+                <!-- News 1 -->
+                <article class="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center space-x-4 text-xs font-bold text-primary uppercase tracking-widest mb-4">
+                            <span>Press Release</span>
+                            <span class="text-slate-300">•</span>
+                            <span class="text-slate-400">Oct 24, 2025</span>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-secondary mb-4 group-hover:text-primary transition-colors">
+                            Arop Group sets new benchmark in elevator technology innovation.
+                        </h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6 line-clamp-3">
+                            Arop Group announces a significant breakthrough in elevator technology focusing on energy efficiency and smart traffic management...
+                        </p>
+                        <a href="news-benchmark.html" class="inline-flex items-center text-primary font-bold hover:gap-2 transition-all">
+                            Read More <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- News 2 -->
+                <article class="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center space-x-4 text-xs font-bold text-primary uppercase tracking-widest mb-4">
+                            <span>Achievement</span>
+                            <span class="text-slate-300">•</span>
+                            <span class="text-slate-400">Sep 12, 2025</span>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-secondary mb-4 group-hover:text-primary transition-colors">
+                            Excellence in Engineering Award 2025 goes to Arop Group.
+                        </h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6 line-clamp-3">
+                            In a prestigious ceremony, Arop Group was honored with the Excellence in Engineering Award for its safety standards...
+                        </p>
+                        <a href="news-award.html" class="inline-flex items-center text-primary font-bold hover:gap-2 transition-all">
+                            Read More <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- News 3 -->
+                <article class="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1181395/pexels-photo-1181395.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center space-x-4 text-xs font-bold text-primary uppercase tracking-widest mb-4">
+                            <span>Event</span>
+                            <span class="text-slate-300">•</span>
+                            <span class="text-slate-400">Aug 05, 2025</span>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-secondary mb-4 group-hover:text-primary transition-colors">
+                            Arop Group holds international seminar on modern urban mobility.
+                        </h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6 line-clamp-3">
+                            Experts from around the world gathered in Dhaka for a seminar hosted by Arop Group to discuss vertical transportation...
+                        </p>
+                        <a href="news-seminar.html" class="inline-flex items-center text-primary font-bold hover:gap-2 transition-all">
+                            Read More <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0f172a] text-slate-400 py-12">
+        <div class="container text-center">
+            <p>&copy; <span id="current-year"></span> Arop Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

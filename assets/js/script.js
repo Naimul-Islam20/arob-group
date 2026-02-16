@@ -32,11 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         if (header) {
             if (window.scrollY > 50) {
-                header.classList.add('py-2', 'bg-white/95');
-                header.classList.remove('py-3', 'bg-white/80');
+                header.classList.add('bg-white/95', 'shadow-md');
+                header.classList.remove('bg-white');
             } else {
-                header.classList.add('py-3', 'bg-white/80');
-                header.classList.remove('py-2', 'bg-white/95');
+                header.classList.add('bg-white');
+                header.classList.remove('bg-white/95', 'shadow-md');
             }
         }
     });

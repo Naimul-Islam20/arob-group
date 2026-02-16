@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Arop Group</title>
+    <meta name="description" content="Get in touch with Arop Group. We are here to help you with your vertical transportation and urban mobility needs.">
+    
+    <!-- Tailwind CSS v3 Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Global Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-sans text-slate-800 bg-white antialiased">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 left-0 w-full z-50 transition-all duration-300 bg-white shadow-sm" id="main-header">
+        <nav class="container py-6 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                    <span class="text-white font-heading font-bold text-xl">A</span>
+                </div>
+                <span class="text-2xl font-heading font-bold tracking-tight text-secondary uppercase">AROP <span class="text-primary">GROUP</span></span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <ul class="hidden md:flex space-x-10 text-sm font-bold uppercase tracking-widest">
+                <li><a href="index.html" class="text-secondary hover:text-primary transition-colors">Home</a></li>
+                <!-- About Us Dropdown -->
+                <li class="relative group">
+                    <a href="#" class="flex items-center text-secondary hover:text-primary transition-colors">
+                        About Us <i class="fa-solid fa-chevron-down ml-1.5 text-[10px] transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="dropdown-menu absolute top-full left-0 w-52 bg-white shadow-2xl rounded-xl py-4 border border-slate-50 mt-2 z-[60]">
+                        <a href="message-for-md.html" class="block px-6 py-2.5 text-[11px] text-secondary hover:text-primary hover:bg-slate-50 transition-all">Message for MD</a>
+                        <a href="all-news.html" class="block px-6 py-2.5 text-[11px] text-secondary hover:text-primary hover:bg-slate-50 transition-all">All News</a>
+                    </div>
+                </li>
+                <li><a href="index.html#services" class="text-secondary hover:text-primary transition-colors">Services</a></li>
+                <li><a href="contact.html" class="text-primary hover:text-accent transition-colors border-b-2 border-primary pb-1">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-secondary focus:outline-none" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars-staggered text-2xl"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white border-t border-slate-100 absolute w-full left-0 overflow-hidden transition-all duration-300 shadow-xl" id="mobile-menu">
+            <ul class="px-6 py-6 space-y-4 text-xs font-semibold uppercase tracking-widest">
+                <li><a href="index.html" class="block text-secondary hover:text-primary">Home</a></li>
+                <li class="space-y-3">
+                    <span class="block text-slate-400 text-[10px]">About Us</span>
+                    <ul class="pl-4 space-y-3">
+                        <li><a href="message-for-md.html" class="block text-secondary">Message for MD</a></li>
+                        <li><a href="all-news.html" class="block text-secondary">All News</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#services" class="block text-secondary hover:text-primary">Services</a></li>
+                <li><a href="contact.html" class="block text-primary">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="bg-slate-50 py-20">
+        <div class="container text-center">
+            <h1 class="text-4xl md:text-6xl font-heading font-bold text-secondary mb-6">Contact Us</h1>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto">Have a project in mind or need assistance? Reach out to us, and our team will get back to you shortly.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-24">
+        <div class="container">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                
+                <!-- Contact Info -->
+                <div class="space-y-12">
+                    <div>
+                        <h2 class="text-3xl font-heading font-bold text-secondary mb-8">Get In Touch</h2>
+                        <p class="text-slate-600 leading-relaxed mb-10">
+                            We are committed to providing the highest level of service and support. Whether you're looking for a consultation, have a technical query, or want to discuss a potential partnership, we're here to listen.
+                        </p>
+                    </div>
+
+                    <div class="space-y-8">
+                        <!-- Address -->
+                        <div class="flex items-start space-x-6">
+                            <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-location-dot text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-secondary mb-1">Our Office</h4>
+                                <p class="text-slate-600">House #12, Road #05, Sector #03, Uttara, Dhaka-1230, Bangladesh</p>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="flex items-start space-x-6">
+                            <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-phone text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-secondary mb-1">Call Us</h4>
+                                <p class="text-slate-600">+880 1234 567 890</p>
+                                <p class="text-slate-600">+880 1987 654 321</p>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex items-start space-x-6">
+                            <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-envelope text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-secondary mb-1">Email Us</h4>
+                                <p class="text-slate-600">info@arobgroup.com</p>
+                                <p class="text-slate-600">support@arobgroup.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white border border-slate-100 shadow-2xl shadow-slate-200/50 rounded-[2.5rem] p-8 md:p-12">
+                    <form action="#" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-secondary uppercase tracking-wider ml-1">Full Name</label>
+                                <input type="text" placeholder="John Doe" class="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 outline-none focus:border-primary transition-all">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-secondary uppercase tracking-wider ml-1">Email Address</label>
+                                <input type="email" placeholder="john@example.com" class="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 outline-none focus:border-primary transition-all">
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-secondary uppercase tracking-wider ml-1">Subject</label>
+                            <input type="text" placeholder="How can we help?" class="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 outline-none focus:border-primary transition-all">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-secondary uppercase tracking-wider ml-1">Message</label>
+                            <textarea rows="5" placeholder="Tell us about your project..." class="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 outline-none focus:border-primary transition-all resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary hover:bg-accent text-white font-bold py-5 rounded-2xl transition-all shadow-xl shadow-primary/20 transform hover:-translate-y-1">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="h-[500px] w-full">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14593.437142823635!2d90.39023605!3d23.876883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c411833e2187%3A0x6b4478f7e7f60759!2sSector%203%2C%20Uttara%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0f172a] text-slate-400 py-12">
+        <div class="container text-center">
+            <p>&copy; <span id="current-year"></span> Arop Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
