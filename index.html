@@ -537,88 +537,113 @@
                 </div>
             </div>
 
-            <!-- News Grid — always 3 cards -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <!-- News Slider/Grid Container -->
+            <div class="relative">
+                <!-- Navigation Arrows (Hidden on Desktop) -->
+                <button id="news-prev" class="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-md border border-slate-100 text-secondary hover:text-primary transition-all active:scale-95 group lg:hidden">
+                    <i class="fa-solid fa-chevron-left group-hover:-translate-x-0.5 transition-transform"></i>
+                </button>
+                <button id="news-next" class="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-md border border-slate-100 text-secondary hover:text-primary transition-all active:scale-95 group lg:hidden">
+                    <i class="fa-solid fa-chevron-right group-hover:translate-x-0.5 transition-transform"></i>
+                </button>
 
-                <!-- Media Item 1 -->
-                <div class="group bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                    <div class="relative h-56 overflow-hidden shrink-0">
-                        <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Media Coverage" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute top-4 left-4">
-                            <span class="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Press Release</span>
+                <!-- Slider Track / Grid on Desktop -->
+                <div class="overflow-hidden lg:overflow-visible py-4">
+                    <div id="news-track" class="flex lg:grid lg:grid-cols-3 lg:gap-8 -mx-4 transition-transform duration-700 ease-in-out lg:!transform-none">
+
+                        <!-- Media Item 1 -->
+                        <div class="news-slide shrink-0 w-full md:w-1/2 lg:w-full px-4">
+                            <div class="group bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 flex flex-col transition-all duration-300 h-full">
+                                <div class="relative h-56 overflow-hidden shrink-0">
+                                    <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Media Coverage" class="w-full h-full object-cover transition-transform duration-700">
+                                    <div class="absolute top-4 left-4">
+                                        <span class="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Press Release</span>
+                                    </div>
+                                </div>
+                                <div class="p-8 flex flex-col flex-1">
+                                    <div class="flex items-center space-x-3 mb-4 text-xs font-bold text-slate-400 uppercase tracking-widest">
+                                        <span class="text-primary">Financial Express</span>
+                                        <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+                                        <span>Oct 24, 2025</span>
+                                    </div>
+                                    <h4 class="text-xl font-heading font-bold text-secondary mb-4 hover:text-primary transition-colors line-clamp-2">
+                                        <a href="news-benchmark.html">Arop Group sets new benchmark in elevator technology innovation.</a>
+                                    </h4>
+                                    <p class="text-slate-600 text-sm leading-relaxed mb-6 line-clamp-3 flex-1">
+                                        Implementing high-speed smart elevators in the capital's newest corporate towers, focusing on zero-friction energy efficiency.
+                                    </p>
+                                    <a href="news-benchmark.html" class="inline-flex items-center text-sm font-bold text-primary hover:gap-3 gap-2 transition-all mt-auto">
+                                        View Article <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="p-8 flex flex-col flex-1">
-                        <div class="flex items-center space-x-3 mb-4 text-xs font-bold text-slate-400 uppercase tracking-widest">
-                            <span class="text-primary">Financial Express</span>
-                            <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
-                            <span>Oct 24, 2025</span>
+
+                        <!-- Media Item 2 -->
+                        <div class="news-slide shrink-0 w-full md:w-1/2 lg:w-full px-4">
+                            <div class="group bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 flex flex-col transition-all duration-300 h-full">
+                                <div class="relative h-56 overflow-hidden shrink-0">
+                                    <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Media Coverage" class="w-full h-full object-cover transition-transform duration-700">
+                                    <div class="absolute top-4 left-4">
+                                        <span class="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Award</span>
+                                    </div>
+                                </div>
+                                <div class="p-8 flex flex-col flex-1">
+                                    <div class="flex items-center space-x-3 mb-4 text-xs font-bold text-slate-400 uppercase tracking-widest">
+                                        <span class="text-primary">The Daily Star</span>
+                                        <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+                                        <span>Sep 12, 2025</span>
+                                    </div>
+                                    <h4 class="text-xl font-heading font-bold text-secondary mb-4 hover:text-primary transition-colors line-clamp-2">
+                                        <a href="news-award.html">Excellence in Engineering Award 2025 goes to Arop Group.</a>
+                                    </h4>
+                                    <p class="text-slate-600 text-sm leading-relaxed mb-6 line-clamp-3 flex-1">
+                                        Recognized for the outstanding contribution to vertical transportation solutions and safety standards in the manufacturing sector.
+                                    </p>
+                                    <a href="news-award.html" class="inline-flex items-center text-sm font-bold text-primary hover:gap-3 gap-2 transition-all mt-auto">
+                                        View Article <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <h4 class="text-xl font-heading font-bold text-secondary mb-4 hover:text-primary transition-colors line-clamp-2">
-                            <a href="news-benchmark.html">Arop Group sets new benchmark in elevator technology innovation.</a>
-                        </h4>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-6 line-clamp-3 flex-1">
-                            Implementing high-speed smart elevators in the capital's newest corporate towers, focusing on zero-friction energy efficiency.
-                        </p>
-                        <a href="news-benchmark.html" class="inline-flex items-center text-sm font-bold text-primary hover:gap-3 gap-2 transition-all mt-auto">
-                            View Article <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-                        </a>
+
+                        <!-- Media Item 3 -->
+                        <div class="news-slide shrink-0 w-full md:w-1/2 lg:w-full px-4">
+                            <div class="group bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 flex flex-col transition-all duration-300 h-full">
+                                <div class="relative h-56 overflow-hidden shrink-0">
+                                    <img src="https://images.pexels.com/photos/1181395/pexels-photo-1181395.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Media Coverage" class="w-full h-full object-cover transition-transform duration-700">
+                                    <div class="absolute top-4 left-4">
+                                        <span class="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Event</span>
+                                    </div>
+                                </div>
+                                <div class="p-8 flex flex-col flex-1">
+                                    <div class="flex items-center space-x-3 mb-4 text-xs font-bold text-slate-400 uppercase tracking-widest">
+                                        <span class="text-primary">Dhaka Tribune</span>
+                                        <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+                                        <span>Aug 05, 2025</span>
+                                    </div>
+                                    <h4 class="text-xl font-heading font-bold text-secondary mb-4 hover:text-primary transition-colors line-clamp-2">
+                                        <a href="news-seminar.html">Arop Group holds international seminar on modern urban mobility.</a>
+                                    </h4>
+                                    <p class="text-slate-600 text-sm leading-relaxed mb-6 line-clamp-3 flex-1">
+                                        Experts from around the world gathered to discuss the future of cities and the role of intelligent lift systems in high-rise buildings.
+                                    </p>
+                                    <a href="news-seminar.html" class="inline-flex items-center text-sm font-bold text-primary hover:gap-3 gap-2 transition-all mt-auto">
+                                        View Article <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
-                <!-- Media Item 2 -->
-                <div class="group bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                    <div class="relative h-56 overflow-hidden shrink-0">
-                        <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Media Coverage" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute top-4 left-4">
-                            <span class="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Award</span>
-                        </div>
-                    </div>
-                    <div class="p-8 flex flex-col flex-1">
-                        <div class="flex items-center space-x-3 mb-4 text-xs font-bold text-slate-400 uppercase tracking-widest">
-                            <span class="text-primary">The Daily Star</span>
-                            <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
-                            <span>Sep 12, 2025</span>
-                        </div>
-                        <h4 class="text-xl font-heading font-bold text-secondary mb-4 hover:text-primary transition-colors line-clamp-2">
-                            <a href="news-award.html">Excellence in Engineering Award 2025 goes to Arop Group.</a>
-                        </h4>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-6 line-clamp-3 flex-1">
-                            Recognized for the outstanding contribution to vertical transportation solutions and safety standards in the manufacturing sector.
-                        </p>
-                        <a href="news-award.html" class="inline-flex items-center text-sm font-bold text-primary hover:gap-3 gap-2 transition-all mt-auto">
-                            View Article <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-                        </a>
-                    </div>
+                <!-- Slider Indicators (Hidden on Desktop) -->
+                <div id="news-dots" class="flex justify-center space-x-3 mt-6 lg:hidden">
+                    <!-- Dots will be generated via JS -->
                 </div>
-
-                <!-- Media Item 3 -->
-                <div class="group bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                    <div class="relative h-56 overflow-hidden shrink-0">
-                        <img src="https://images.pexels.com/photos/1181395/pexels-photo-1181395.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Media Coverage" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute top-4 left-4">
-                            <span class="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">Event</span>
-                        </div>
-                    </div>
-                    <div class="p-8 flex flex-col flex-1">
-                        <div class="flex items-center space-x-3 mb-4 text-xs font-bold text-slate-400 uppercase tracking-widest">
-                            <span class="text-primary">Dhaka Tribune</span>
-                            <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
-                            <span>Aug 05, 2025</span>
-                        </div>
-                        <h4 class="text-xl font-heading font-bold text-secondary mb-4 hover:text-primary transition-colors line-clamp-2">
-                            <a href="news-seminar.html">Arop Group holds international seminar on modern urban mobility.</a>
-                        </h4>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-6 line-clamp-3 flex-1">
-                            Experts from around the world gathered to discuss the future of cities and the role of intelligent lift systems in high-rise buildings.
-                        </p>
-                        <a href="news-seminar.html" class="inline-flex items-center text-sm font-bold text-primary hover:gap-3 gap-2 transition-all mt-auto">
-                            View Article <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-
             </div>
+
 
             <!-- View All News CTA -->
             <div class="text-center mt-10 md:mt-14 flex justify-center">

@@ -539,4 +539,147 @@ document.addEventListener('DOMContentLoaded', () => {
         updateSlider(false);
         startAutoSlide();
     }
+
+    // News Slider Logic
+    const newsTrack = document.getElementById('news-track');
+    let newsSlides = document.querySelectorAll('.news-slide');
+    const newsPrev = document.getElementById('news-prev');
+    const newsNext = document.getElementById('news-next');
+    const newsDotsContainer = document.getElementById('news-dots');
+
+    if (newsTrack && newsSlides.length > 0) {
+        let currentIndex = 0;
+        let isTransitioning = false;
+        let autoSlideInterval;
+        const originalCount = newsSlides.length;
+
+        // Clone slides for infinite effect
+        newsSlides.forEach(slide => {
+            const clone = slide.cloneNode(true);
+            clone.classList.add('slider-clone', 'lg:hidden');
+            newsTrack.appendChild(clone);
+        });
+
+        function getSlidesToShow() {
+            if (window.innerWidth >= 1024) return 3;
+            if (window.innerWidth >= 768) return 2;
+            return 1;
+        }
+
+        function updateSlider(animate = true) {
+            // Exit early if Desktop (Grid layout handles it)
+            if (window.innerWidth >= 1024) {
+                newsTrack.style.transform = 'none';
+                return;
+            }
+
+            const slidesToShow = getSlidesToShow();
+            const slideWidth = 100 / slidesToShow;
+            
+            if (!animate) {
+                newsTrack.style.transition = 'none';
+            } else {
+                newsTrack.style.transition = 'transform 0.7s ease-in-out';
+            }
+
+            newsTrack.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+            
+            const dots = newsDotsContainer.querySelectorAll('button');
+            const activeDotIndex = currentIndex % originalCount;
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('bg-primary', i === activeDotIndex);
+                dot.classList.toggle('bg-slate-300', i !== activeDotIndex);
+                dot.classList.toggle('w-12', i === activeDotIndex);
+                dot.classList.toggle('w-2.5', i !== activeDotIndex);
+            });
+
+            if (!animate) {
+                newsTrack.offsetHeight;
+                newsTrack.style.transition = 'transform 0.7s ease-in-out';
+            }
+        }
+
+        function nextNews() {
+            if (window.innerWidth >= 1024 || isTransitioning) return;
+            isTransitioning = true;
+            
+            currentIndex++;
+            updateSlider();
+
+            setTimeout(() => {
+                if (currentIndex >= originalCount) {
+                    currentIndex = 0;
+                    updateSlider(false);
+                }
+                isTransitioning = false;
+            }, 700);
+        }
+
+        function prevNews() {
+            if (window.innerWidth >= 1024 || isTransitioning) return;
+            isTransitioning = true;
+
+            if (currentIndex === 0) {
+                currentIndex = originalCount;
+                updateSlider(false);
+                setTimeout(() => {
+                    currentIndex--;
+                    updateSlider();
+                }, 10);
+            } else {
+                currentIndex--;
+                updateSlider();
+            }
+
+            setTimeout(() => {
+                isTransitioning = false;
+            }, 700);
+        }
+
+        function createDots() {
+            if (!newsDotsContainer) return;
+            newsDotsContainer.innerHTML = '';
+            for (let i = 0; i < originalCount; i++) {
+                const dot = document.createElement('button');
+                dot.className = `h-2.5 rounded-full transition-all duration-300 ${i === currentIndex % originalCount ? 'bg-primary w-12' : 'bg-slate-300 w-2.5'}`;
+                dot.addEventListener('click', () => {
+                    if (window.innerWidth >= 1024 || isTransitioning) return;
+                    currentIndex = i;
+                    updateSlider();
+                    startAutoSlide();
+                });
+                newsDotsContainer.appendChild(dot);
+            }
+        }
+
+        function startAutoSlide() {
+            clearInterval(autoSlideInterval);
+            if (window.innerWidth < 1024) {
+                autoSlideInterval = setInterval(nextNews, 5000);
+            }
+        }
+
+        if (newsNext) newsNext.addEventListener('click', () => {
+            nextNews();
+            startAutoSlide();
+        });
+
+        if (newsPrev) newsPrev.addEventListener('click', () => {
+            prevNews();
+            startAutoSlide();
+        });
+
+        window.addEventListener('resize', () => {
+            updateSlider(false);
+            if (window.innerWidth >= 1024) {
+                clearInterval(autoSlideInterval);
+            } else {
+                startAutoSlide();
+            }
+        });
+
+        createDots();
+        updateSlider(false);
+        startAutoSlide();
+    }
 });
