@@ -413,6 +413,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Clone slides for infinite effect
         serviceSlides.forEach(slide => {
             const clone = slide.cloneNode(true);
+            clone.classList.add('slider-clone', 'lg:hidden');
             serviceTrack.appendChild(clone);
         });
 
@@ -423,6 +424,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         function updateSlider(animate = true) {
+            // Exit early if Desktop (Grid layout handles it)
+            if (window.innerWidth >= 1024) {
+                serviceTrack.style.transform = 'none';
+                return;
+            }
+
             const slidesToShow = getSlidesToShow();
             const slideWidth = 100 / slidesToShow;
             
@@ -450,7 +457,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         function nextService() {
-            if (isTransitioning) return;
+            if (window.innerWidth >= 1024 || isTransitioning) return;
             isTransitioning = true;
             
             currentIndex++;
@@ -466,7 +473,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         function prevService() {
-            if (isTransitioning) return;
+            if (window.innerWidth >= 1024 || isTransitioning) return;
             isTransitioning = true;
 
             if (currentIndex === 0) {
@@ -487,12 +494,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         function createDots() {
+            if (!serviceDotsContainer) return;
             serviceDotsContainer.innerHTML = '';
             for (let i = 0; i < originalCount; i++) {
                 const dot = document.createElement('button');
                 dot.className = `h-2.5 rounded-full transition-all duration-300 ${i === currentIndex % originalCount ? 'bg-primary w-12' : 'bg-slate-300 w-2.5'}`;
                 dot.addEventListener('click', () => {
-                    if (isTransitioning) return;
+                    if (window.innerWidth >= 1024 || isTransitioning) return;
                     currentIndex = i;
                     updateSlider();
                     startAutoSlide();
@@ -503,7 +511,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function startAutoSlide() {
             clearInterval(autoSlideInterval);
-            autoSlideInterval = setInterval(nextService, 5000);
+            if (window.innerWidth < 1024) {
+                autoSlideInterval = setInterval(nextService, 5000);
+            }
         }
 
         if (serviceNext) serviceNext.addEventListener('click', () => {
@@ -518,11 +528,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         window.addEventListener('resize', () => {
             updateSlider(false);
+            if (window.innerWidth >= 1024) {
+                clearInterval(autoSlideInterval);
+            } else {
+                startAutoSlide();
+            }
         });
 
         createDots();
         updateSlider(false);
         startAutoSlide();
     }
-
 });

@@ -312,22 +312,22 @@
                 <div class="w-24 h-1.5 bg-primary mx-auto mt-6 rounded-full opacity-80"></div>
             </div>
 
-            <!-- Services Slider Container -->
+            <!-- Services Slider/Grid Container -->
             <div class="relative">
-                <!-- Navigation Arrows -->
-                <button id="service-prev" class="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-md border border-slate-100 text-secondary hover:text-primary transition-all active:scale-95 group">
+                <!-- Navigation Arrows (Hidden on Desktop) -->
+                <button id="service-prev" class="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-md border border-slate-100 text-secondary hover:text-primary transition-all active:scale-95 group lg:hidden">
                     <i class="fa-solid fa-chevron-left group-hover:-translate-x-0.5 transition-transform"></i>
                 </button>
-                <button id="service-next" class="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-md border border-slate-100 text-secondary hover:text-primary transition-all active:scale-95 group">
+                <button id="service-next" class="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-md border border-slate-100 text-secondary hover:text-primary transition-all active:scale-95 group lg:hidden">
                     <i class="fa-solid fa-chevron-right group-hover:translate-x-0.5 transition-transform"></i>
                 </button>
 
-                <!-- Slider Track -->
-                <div class="overflow-hidden py-4">
-                    <div id="service-track" class="flex -mx-4 transition-transform duration-700 ease-in-out">
+                <!-- Slider Track / Grid on Desktop -->
+                <div class="overflow-hidden lg:overflow-visible py-4">
+                    <div id="service-track" class="flex lg:grid lg:grid-cols-3 lg:gap-y-12 -mx-4 transition-transform duration-700 ease-in-out lg:!transform-none">
                         
                         <!-- Service 1: Sigma Passenger Lift -->
-                        <div class="service-slide shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                        <div class="service-slide shrink-0 w-full md:w-1/2 lg:w-full px-4">
                             <div class="group relative bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full">
                                 <div class="h-64 overflow-hidden">
                                     <img src="https://images.pexels.com/photos/1687091/pexels-photo-1687091.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sigma Passenger Lift" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
@@ -345,7 +345,7 @@
                         </div>
 
                         <!-- Service 2: Advanced Escalator -->
-                        <div class="service-slide shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                        <div class="service-slide shrink-0 w-full md:w-1/2 lg:w-full px-4">
                             <div class="group relative bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full">
                                 <div class="h-64 overflow-hidden">
                                     <img src="https://images.pexels.com/photos/1545416/pexels-photo-1545416.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Advanced Escalator" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
@@ -363,7 +363,7 @@
                         </div>
 
                         <!-- Service 3: Sigma COP & LOP -->
-                        <div class="service-slide shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                        <div class="service-slide shrink-0 w-full md:w-1/2 lg:w-full px-4">
                             <div class="group relative bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full">
                                 <div class="h-64 overflow-hidden">
                                     <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sigma COP & LOP" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
@@ -381,7 +381,7 @@
                         </div>
 
                         <!-- Service 4: Landing Door -->
-                        <div class="service-slide shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                        <div class="service-slide shrink-0 w-full md:w-1/2 lg:w-full px-4">
                             <div class="group relative bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full">
                                 <div class="h-64 overflow-hidden">
                                     <img src="https://images.pexels.com/photos/2251247/pexels-photo-2251247.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Landing Door" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
@@ -399,7 +399,7 @@
                         </div>
 
                         <!-- Service 5: CEILING -->
-                        <div class="service-slide shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                        <div class="service-slide shrink-0 w-full md:w-1/2 lg:w-full px-4">
                             <div class="group relative bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full">
                                 <div class="h-64 overflow-hidden">
                                     <img src="https://images.pexels.com/photos/2085998/pexels-photo-2085998.jpeg?auto=compress&cs=tinysrgb&w=800" alt="CEILING" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
@@ -417,7 +417,7 @@
                         </div>
 
                         <!-- Service 6: SIGMA ACCESSORIES -->
-                        <div class="service-slide shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                        <div class="service-slide shrink-0 w-full md:w-1/2 lg:w-full px-4">
                             <div class="group relative bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full">
                                 <div class="h-64 overflow-hidden">
                                     <img src="https://images.pexels.com/photos/1585814/pexels-photo-1585814.jpeg?auto=compress&cs=tinysrgb&w=800" alt="SIGMA ACCESSORIES" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
@@ -437,8 +437,8 @@
                     </div>
                 </div>
 
-                <!-- Slider Indicators -->
-                <div id="service-dots" class="flex justify-center space-x-3 mt-6">
+                <!-- Slider Indicators (Hidden on Desktop) -->
+                <div id="service-dots" class="flex justify-center space-x-3 mt-6 lg:hidden">
                     <!-- Dots will be generated via JS -->
                 </div>
             </div>
