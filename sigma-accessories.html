@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sigma Accessories | Arop Group</title>
+    <meta name="description" content="Sigma Accessories - Genuine spare parts and high-quality components for elevator maintenance and performance.">
+    
     <!-- Tailwind CSS v3 Play CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <!-- Google Fonts: Outfit & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- Global Custom Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="font-sans text-secondary bg-slate-50 overflow-x-hidden">
+
     <!-- Header / Navbar -->
     <header class="sticky top-0 left-0 w-full z-50 transition-all duration-300 bg-white shadow-sm" id="main-header">
-        <nav class="container py-6 flex items-center justify-between">
+        <nav class="container py-4 md:py-6 flex items-center justify-between">
             <a href="index.html" class="flex items-center space-x-2">
                 <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
                     <span class="text-white font-heading font-bold text-xl">A</span>
@@ -32,68 +38,281 @@
                     <a href="#" class="flex items-center text-secondary hover:text-primary transition-colors">
                         About Us <i class="fa-solid fa-chevron-down ml-1.5 text-[10px] transition-transform group-hover:rotate-180"></i>
                     </a>
-                    <div class="dropdown-menu absolute top-full left-0 w-52 bg-white shadow-2xl rounded-xl py-4 border border-slate-50 mt-2 z-[60]">
-                        <a href="message-for-md.html" class="block px-6 py-2.5 text-[11px] text-secondary hover:text-primary hover:bg-slate-50 transition-all">Message for MD</a>
-                        <a href="all-news.html" class="block px-6 py-2.5 text-[11px] text-secondary hover:text-primary hover:bg-slate-50 transition-all">All News</a>
+                    <div class="dropdown-menu absolute top-full left-0 w-52 bg-white shadow-2xl rounded-xl py-4 border border-slate-50 mt-2 z-[60] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                        <a href="message-for-md.html" class="block px-6 py-2.5 text-[11px] text-secondary hover:text-primary hover:bg-slate-50 transition-all uppercase font-bold tracking-widest">Message for MD</a>
+                        <a href="all-news.html" class="block px-6 py-2.5 text-[11px] text-secondary hover:text-primary hover:bg-slate-50 transition-all uppercase font-bold tracking-widest">All News</a>
                     </div>
                 </li>
-                <li><a href="index.html#services" class="text-primary hover:text-accent transition-colors border-b-2 border-primary pb-1">Services</a></li>
+                <li><a href="services.html" class="text-primary hover:text-accent transition-all border-b-2 border-primary pb-1">Services</a></li>
                 <li><a href="contact.html" class="text-secondary hover:text-primary transition-colors">Contact</a></li>
             </ul>
 
-            <button class="md:hidden text-secondary focus:outline-none" id="mobile-menu-btn">
-                <i class="fa-solid fa-bars-staggered text-2xl"></i>
+            <button class="md:hidden w-10 h-10 flex items-center justify-center text-secondary focus:outline-none hover:text-primary transition-colors" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars text-2xl leading-none"></i>
             </button>
         </nav>
-
-        <div class="md:hidden hidden bg-white border-t border-slate-100 absolute w-full left-0 overflow-hidden transition-all duration-300 shadow-xl" id="mobile-menu">
-            <ul class="px-6 py-6 space-y-4 text-xs font-semibold uppercase tracking-widest">
-                <li><a href="index.html" class="block text-secondary hover:text-primary">Home</a></li>
-                <li class="space-y-3">
-                    <span class="block text-slate-400 text-[10px]">About Us</span>
-                    <ul class="pl-4 space-y-3">
-                        <li><a href="message-for-md.html" class="block text-secondary">Message for MD</a></li>
-                        <li><a href="all-news.html" class="block text-secondary">All News</a></li>
-                    </ul>
-                </li>
-                <li><a href="index.html#services" class="block text-primary">Services</a></li>
-                <li><a href="contact.html" class="block text-secondary">Contact</a></li>
-            </ul>
-        </div>
     </header>
 
-    <section class="pt-32 pb-20 bg-secondary relative overflow-hidden">
-        <div class="absolute inset-0 z-0 opacity-20">
-            <img src="https://images.pexels.com/photos/1585814/pexels-photo-1585814.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Background" class="w-full h-full object-cover blur-sm">
-        </div>
-        <div class="container relative z-10 text-center">
-            <h1 class="text-4xl md:text-6xl font-heading font-bold text-white mb-6">Sigma Accessories</h1>
-            <div class="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
-        </div>
-    </section>
+    <!-- Professional Mobile Sidebar Overlay -->
+    <div id="menu-overlay" class="fixed inset-0 bg-secondary/60 backdrop-blur-sm z-[60] hidden opacity-0 transition-opacity duration-300"></div>
 
-    <section class="py-24">
-        <div class="container">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-                <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
-                    <img src="https://images.pexels.com/photos/1585814/pexels-photo-1585814.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Sigma Accessories" class="w-full h-auto">
+    <!-- Professional Mobile Sidebar -->
+    <div id="mobile-menu" class="fixed top-0 right-0 w-[300px] h-full bg-white z-[70] shadow-2xl translate-x-full transition-transform duration-500 ease-in-out flex flex-col">
+        <!-- Sidebar Header -->
+        <div class="p-6 border-b border-slate-100 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                    <span class="text-white font-heading font-bold text-lg">A</span>
                 </div>
-                <div class="p-8">
-                    <h2 class="text-primary font-heading font-bold tracking-wider text-sm uppercase mb-3">Critical Components</h2>
-                    <h3 class="text-3xl md:text-4xl font-heading font-bold text-secondary mb-6">Genuine Sigma Spare Parts</h3>
-                    <p class="text-slate-600 leading-relaxed text-lg mb-6">
-                        Sigma Elevator Spare Parts, Electrical Control Panels, Synchronous Gearless Motors, AVR & ARD Supplier, Complete Cabin, Motor Control.
-                    </p>
+                <span class="text-xl font-heading font-bold tracking-tight text-secondary uppercase">AROP <span class="text-primary">GROUP</span></span>
+            </a>
+            <button id="close-menu" class="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-50 text-secondary hover:text-primary transition-colors">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Sidebar Links -->
+        <div class="flex-1 overflow-y-auto py-4">
+            <ul class="px-6 space-y-1">
+                <li>
+                    <a href="index.html" class="flex items-center space-x-4 p-2 rounded-xl hover:bg-slate-50 text-secondary font-bold transition-all group">
+                        <i class="fa-solid fa-house text-sm w-5 text-center text-slate-400 group-hover:text-primary"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                
+                <!-- About Accordion -->
+                <li>
+                    <div class="space-y-0.5">
+                        <button class="w-full flex items-center justify-between p-2 rounded-xl hover:bg-slate-50 text-secondary font-bold transition-all group" onclick="toggleAccordion('about-submenu')">
+                            <div class="flex items-center space-x-4">
+                                <i class="fa-solid fa-circle-info text-sm w-5 text-slate-400 group-hover:text-primary text-center"></i>
+                                <span>About Us</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 transition-transform duration-300"></i>
+                        </button>
+                        <div id="about-submenu" class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 ease-in-out overflow-hidden pl-12 pr-4">
+                            <div class="overflow-hidden space-y-1">
+                                <a href="message-for-md.html" class="block text-sm text-slate-600 hover:text-primary py-2.5 transition-colors border-l border-slate-100 pl-4 -ml-4">Message for MD</a>
+                                <a href="all-news.html" class="block text-sm text-slate-600 hover:text-primary py-2.5 transition-colors border-l border-slate-100 pl-4 -ml-4">All News</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Services Link -->
+                <li>
+                    <a href="services.html" class="flex items-center space-x-4 p-2 rounded-xl bg-primary/10 text-primary font-bold transition-all">
+                        <i class="fa-solid fa-gear text-sm w-5 text-center"></i>
+                        <span>Our Services</span>
+                    </a>
+                </li>
+
+                <!-- Contact Link -->
+                <li>
+                    <a href="contact.html" class="flex items-center space-x-4 p-2 rounded-xl hover:bg-slate-50 text-secondary font-bold transition-all group">
+                        <i class="fa-solid fa-envelope text-sm w-5 text-center text-slate-400 group-hover:text-primary text-center"></i>
+                        <span>Contact Us</span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Contact Support Card -->
+            <div class="mx-6 mt-6 space-y-3">
+                <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Need Support?</span>
+                <div class="space-y-3">
+                    <a href="tel:+880255012009" class="flex items-center space-x-3 text-sm text-secondary font-bold hover:text-primary transition-colors">
+                        <div class="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-primary">
+                            <i class="fa-solid fa-phone text-xs"></i>
+                        </div>
+                        <span>+88-02-55012009</span>
+                    </a>
+                    <a href="mailto:info@arobgroup.com" class="flex items-center space-x-3 text-sm text-secondary font-bold hover:text-primary transition-colors">
+                        <div class="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-primary">
+                            <i class="fa-solid fa-envelope text-xs"></i>
+                        </div>
+                        <span>info@arobgroup.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar Footer -->
+        <div class="p-6 border-t border-slate-100">
+            <div class="flex justify-between items-center text-slate-400 mb-4 px-2">
+                <span class="text-[10px] uppercase font-bold tracking-widest">Follow Us</span>
+                <div class="h-px flex-1 bg-slate-100 mx-4"></div>
+            </div>
+            <div class="flex space-x-3">
+                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-50 text-slate-400 hover:bg-primary hover:text-white transition-all">
+                    <i class="fa-brands fa-facebook-f text-sm"></i>
+                </a>
+                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-50 text-slate-400 hover:bg-primary hover:text-white transition-all">
+                    <i class="fa-brands fa-twitter text-sm"></i>
+                </a>
+                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-50 text-slate-400 hover:bg-primary hover:text-white transition-all">
+                    <i class="fa-brands fa-linkedin-in text-sm"></i>
+                </a>
+                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-50 text-slate-400 hover:bg-primary hover:text-white transition-all">
+                    <i class="fa-brands fa-instagram text-sm"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Premium Service Hero -->
+    <section class="relative min-h-[50vh] md:min-h-[60vh] flex items-center py-12 md:py-20 bg-secondary overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.pexels.com/photos/1585814/pexels-photo-1585814.jpeg?auto=compress&cs=tinysrgb&w=2000" alt="Sigma Accessories Background" class="w-full h-full object-cover opacity-20 blur-sm scale-105">
+            <div class="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/80 to-transparent"></div>
+        </div>
+        
+        <div class="container relative z-10 px-4 md:px-6">
+            <div class="max-w-3xl text-center md:text-left">
+                <nav class="flex items-center justify-center md:justify-start space-x-2 text-slate-400 text-[9px] md:text-[10px] uppercase font-bold tracking-widest mb-4 md:mb-6">
+                    <a href="index.html" class="hover:text-primary">Home</a>
+                    <i class="fa-solid fa-chevron-right text-[7px] md:text-[8px]"></i>
+                    <a href="services.html" class="hover:text-primary">Services</a>
+                    <i class="fa-solid fa-chevron-right text-[7px] md:text-[8px]"></i>
+                    <span class="text-white">Sigma Accessories</span>
+                </nav>
+                
+                <h1 class="text-3xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-4 md:mb-8 leading-tight">
+                    Sigma <span class="text-primary italic">Accessories</span>
+                </h1>
+                <p class="text-base md:text-xl text-slate-300 leading-relaxed max-w-2xl mb-6 md:mb-10">
+                    Empowering performance with genuine Sigma spare parts. Keep your systems running at peak efficiency with our comprehensive range of high-quality components.
+                </p>
+                <div class="flex justify-center md:justify-start">
+                    <a href="contact.html" class="w-full sm:w-auto bg-primary hover:bg-accent text-white px-8 py-3.5 md:py-4 rounded-full font-bold transition-all shadow-xl shadow-primary/30 flex items-center justify-center">
+                        Contact Sales <i class="fa-solid fa-arrow-right ml-3 text-sm"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-[#0f172a] text-slate-400 py-12">
-        <div class="container text-center">
-            <p>&copy; <span id="current-year"></span> Arop Group. All rights reserved.</p>
+    <!-- Main Content Section -->
+    <section id="details" class="py-24 bg-white">
+        <div class="container">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                
+                <!-- Left Content -->
+                <div class="lg:col-span-8">
+                    <div class="mb-16">
+                        <h2 class="text-primary font-heading font-bold tracking-wider text-sm uppercase mb-4">Core Components</h2>
+                        <h3 class="text-3xl md:text-4xl font-heading font-bold text-secondary mb-8 leading-tight">The Backbone of Performance.</h3>
+                        <p class="text-slate-600 leading-relaxed text-lg mb-8 text-justify">
+                            Arop Group provides a complete ecosystem of Sigma elevator accessories. From synchronous gearless motors to advanced Electrical Control Panels (ECP), our inventory is curated for longevity and reliability. We are also leading suppliers of Automatic Voltage Regulators (AVR) and Automatic Rescue Devices (ARD), ensuring your systems stay safe even during power fluctuations.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                            <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100 group hover:bg-primary transition-all duration-500">
+                                <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-primary text-2xl mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-gears"></i>
+                                </div>
+                                <h4 class="text-xl font-heading font-bold text-secondary mb-3 group-hover:text-white transition-colors">Genuine Parts</h4>
+                                <p class="text-slate-500 text-sm group-hover:text-white/80 transition-colors">100% original Sigma components for seamless compatibility and long-term durability.</p>
+                            </div>
+                            <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100 group hover:bg-primary transition-all duration-500">
+                                <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-primary text-2xl mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-truck-fast"></i>
+                                </div>
+                                <h4 class="text-xl font-heading font-bold text-secondary mb-3 group-hover:text-white transition-colors">Fast Logistics</h4>
+                                <p class="text-slate-500 text-sm group-hover:text-white/80 transition-colors">Extensive local inventory ensures minimal downtime for critical repairs and upgrades.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Sidebar -->
+                <div class="lg:col-span-4 space-y-12">
+                    <div class="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm">
+                        <h4 class="text-xl font-heading font-bold text-secondary mb-8">Component Categories</h4>
+                        <ul class="space-y-4">
+                            <li class="p-4 rounded-2xl border border-slate-50 text-slate-600 font-bold text-sm uppercase">Mechanical Drives</li>
+                            <li class="p-4 rounded-2xl border border-slate-50 text-slate-600 font-bold text-sm uppercase">Electrical Panels</li>
+                            <li class="p-4 rounded-2xl border border-slate-50 text-slate-600 font-bold text-sm uppercase">Safety Devices (AVR/ARD)</li>
+                            <li class="p-4 rounded-2xl border border-slate-50 text-slate-600 font-bold text-sm uppercase">Communication Systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0f172a] text-slate-400 pt-12 md:pt-24 pb-0 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -mr-64 -mt-64"></div>
+        <div class="container relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-16 mb-12 md:mb-20">
+                <div class="space-y-6 md:space-y-8">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
+                            <span class="text-white font-heading font-bold text-2xl tracking-tighter">A</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-2xl font-heading font-bold tracking-tight text-white leading-none">AROP</span>
+                            <span class="text-xs font-bold tracking-[0.2em] text-primary uppercase">Group</span>
+                        </div>
+                    </a>
+                    <p class="text-slate-400 leading-relaxed text-sm">Leading the industry with high-speed elevator innovations and advanced vertical transportation solutions. Building the future, one floor at a time.</p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white hover:bg-primary hover:border-primary transition-all duration-300"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white hover:bg-primary hover:border-primary transition-all duration-300"><i class="fa-brands fa-twitter text-sm"></i></a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white hover:bg-primary hover:border-primary transition-all duration-300"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white hover:bg-primary hover:border-primary transition-all duration-300"><i class="fa-brands fa-instagram text-sm"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white font-heading font-bold text-lg mb-6 md:mb-8 relative inline-block">Quick Links<span class="absolute -bottom-2 left-0 w-8 h-1 bg-primary rounded-full"></span></h3>
+                    <ul class="space-y-4">
+                        <li><a href="index.html" class="group flex items-center hover:text-white transition-colors"><span class="w-0 group-hover:w-4 h-0.5 bg-primary mr-0 group-hover:mr-2 transition-all duration-300 rounded-full"></span>Home</a></li>
+                        <li><a href="services.html" class="group flex items-center hover:text-white transition-colors"><span class="w-0 group-hover:w-4 h-0.5 bg-primary mr-0 group-hover:mr-2 transition-all duration-300 rounded-full"></span>Our Services</a></li>
+                        <li><a href="index.html#portfolio" class="group flex items-center hover:text-white transition-colors"><span class="w-0 group-hover:w-4 h-0.5 bg-primary mr-0 group-hover:mr-2 transition-all duration-300 rounded-full"></span>Our Portfolio</a></li>
+                        <li><a href="all-news.html" class="group flex items-center hover:text-white transition-colors"><span class="w-0 group-hover:w-4 h-0.5 bg-primary mr-0 group-hover:mr-2 transition-all duration-300 rounded-full"></span>Media Coverage</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-heading font-bold text-lg mb-6 md:mb-8 relative inline-block">Contact Info<span class="absolute -bottom-2 left-0 w-8 h-1 bg-primary rounded-full"></span></h3>
+                    <ul class="space-y-4 md:space-y-6">
+                        <li class="flex items-start space-x-4">
+                            <div class="w-10 h-10 shrink-0 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-primary"><i class="fa-solid fa-location-dot text-sm"></i></div>
+                            <span class="text-sm leading-relaxed">House #36, Road #10, Block #D, Niketan, Gulshan-1, Dhaka-1212</span>
+                        </li>
+                        <li class="flex items-center space-x-4">
+                            <div class="w-10 h-10 shrink-0 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-primary"><i class="fa-solid fa-phone text-sm"></i></div>
+                            <div class="flex flex-col"><span class="text-sm text-white font-medium">+88-02-55012009</span><span class="text-xs text-slate-500">Mon-Fri: 9am - 6pm</span></div>
+                        </li>
+                        <li class="flex items-center space-x-4">
+                            <div class="w-10 h-10 shrink-0 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-primary"><i class="fa-solid fa-envelope text-sm"></i></div>
+                            <span class="text-sm text-white font-medium">info@arobgroup.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="space-y-6 md:space-y-8">
+                    <h3 class="text-white font-heading font-bold text-lg mb-6 md:mb-8 relative inline-block">Newsletter<span class="absolute -bottom-2 left-0 w-8 h-1 bg-primary rounded-full"></span></h3>
+                    <p class="text-sm leading-relaxed">Subscribe to get the latest updates and industry news delivered to your inbox.</p>
+                    <div class="relative">
+                        <input type="email" placeholder="Your email address" class="w-full bg-white/5 border border-white/10 rounded-2xl py-4 pl-6 pr-16 text-sm text-white focus:outline-none focus:border-primary transition-colors">
+                        <button class="absolute right-2 top-2 bottom-2 w-12 bg-primary hover:bg-accent text-white rounded-xl transition-all flex items-center justify-center shadow-lg shadow-primary/20"><i class="fa-solid fa-paper-plane text-xs"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-6 pb-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 text-xs text-center md:text-left">
+                <p>&copy; <span id="current-year"></span> <a href="https://muktodharaltd.com/" target="_blank" class="text-primary hover:text-white font-bold transition-colors uppercase">Muktodhara Technology Ltd</a>. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/+8801753142800" class="whatsapp-float" target="_blank" title="Contact us on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
     <script src="assets/js/script.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

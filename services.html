@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Arop Group</title>
-    <meta name="description" content="Get in touch with Arop Group. We are here to help you with your vertical transportation and urban mobility needs.">
+    <title>All Services | Arop Group</title>
+    <meta name="description" content="Explore our wide range of services including passenger lifts, escalators, and technical accessories.">
     
     <!-- Tailwind CSS v3 Play CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -12,7 +12,7 @@
     <!-- Google Fonts: Outfit & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -20,7 +20,7 @@
     <!-- Global Custom Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="font-sans text-slate-800 bg-white antialiased">
+<body class="font-sans text-secondary bg-slate-50 overflow-x-hidden">
 
     <!-- Header / Navbar -->
     <header class="sticky top-0 left-0 w-full z-50 transition-all duration-300 bg-white shadow-sm" id="main-header">
@@ -46,8 +46,8 @@
                         <a href="all-news.html" class="block px-6 py-2.5 text-[11px] text-secondary hover:text-primary hover:bg-slate-50 transition-all uppercase font-bold tracking-widest">All News</a>
                     </div>
                 </li>
-                <li><a href="services.html" class="text-secondary hover:text-primary transition-colors">Services</a></li>
-                <li><a href="contact.html" class="text-primary hover:text-accent transition-all border-b-2 border-primary pb-1">Contact</a></li>
+                <li><a href="services.html" class="text-primary hover:text-accent transition-all border-b-2 border-primary pb-1">Services</a></li>
+                <li><a href="contact.html" class="text-secondary hover:text-primary transition-colors">Contact</a></li>
             </ul>
 
             <!-- Mobile Menu Toggle -->
@@ -106,16 +106,16 @@
 
                 <!-- Services Link -->
                 <li>
-                    <a href="services.html" class="flex items-center space-x-4 p-2 rounded-xl hover:bg-slate-50 text-secondary font-bold transition-all group">
-                        <i class="fa-solid fa-gear text-sm w-5 text-center text-slate-400 group-hover:text-primary"></i>
+                    <a href="services.html" class="flex items-center space-x-4 p-2 rounded-xl bg-primary/10 text-primary font-bold transition-all">
+                        <i class="fa-solid fa-gear text-sm w-5 text-center"></i>
                         <span>Our Services</span>
                     </a>
                 </li>
 
                 <!-- Contact Link -->
                 <li>
-                    <a href="contact.html" class="flex items-center space-x-4 p-2 rounded-xl bg-primary/10 text-primary font-bold transition-all">
-                        <i class="fa-solid fa-envelope text-sm w-5 text-center"></i>
+                    <a href="contact.html" class="flex items-center space-x-4 p-2 rounded-xl hover:bg-slate-50 text-secondary font-bold transition-all group">
+                        <i class="fa-solid fa-envelope text-sm w-5 text-slate-400 group-hover:text-primary text-center"></i>
                         <span>Contact Us</span>
                     </a>
                 </li>
@@ -164,108 +164,122 @@
         </div>
     </div>
 
-    <!-- Page Header -->
-    <section class="bg-slate-50 py-10 md:py-20 shadow-inner">
-        <div class="container text-center px-4">
-            <h1 class="text-3xl md:text-6xl font-heading font-bold text-secondary mb-3 md:mb-6 leading-tight">Contact Us</h1>
-            <p class="text-sm md:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">Have a project in mind or need assistance? Reach out to us, and our team will get back to you shortly.</p>
+    <!-- Services Hero Section -->
+    <section class="pt-20 pb-12 md:pt-32 md:pb-20 bg-secondary relative overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20">
+            <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Background" class="w-full h-full object-cover blur-sm">
+        </div>
+        <div class="container relative z-10 text-center">
+            <h2 class="text-primary font-heading font-bold tracking-wider text-sm uppercase mb-3">Professional Solutions</h2>
+            <h1 class="text-3xl md:text-6xl font-heading font-bold text-white mb-4 md:mb-6">Our Services</h1>
+            <div class="w-16 md:w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
+            <p class="text-slate-300 mt-6 md:mt-8 max-w-2xl mx-auto text-base md:text-lg leading-relaxed px-4 md:px-0">
+                We offer a comprehensive range of vertical transportation solutions, from high-speed passenger lifts to advanced industrial escalators.
+            </p>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="py-10 md:py-24">
+    <!-- Our Services Grid Section -->
+    <section id="services-grid" class="py-12 md:py-24 bg-white relative overflow-hidden">
         <div class="container">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
-                
-                <!-- Contact Info -->
-                <div class="space-y-8 md:space-y-12">
-                    <div>
-                        <h2 class="text-2xl md:text-3xl font-heading font-bold text-secondary mb-4 md:mb-8">Get In Touch</h2>
-                        <p class="text-sm md:text-base text-slate-600 leading-relaxed mb-6 md:mb-10">
-                            We are committed to providing the highest level of service and support. Whether you're looking for a consultation, have a technical query, or want to discuss a potential partnership, we're here to listen.
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+                <!-- Service 1: Sigma Passenger Lift -->
+                <div class="group relative bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1687091/pexels-photo-1687091.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sigma Passenger Lift" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-heading font-bold text-secondary mb-4 hover:text-primary transition-colors cursor-pointer"><a href="sigma-passenger-lift.html">Sigma Passenger Lift</a></h4>
+                        <p class="text-slate-600 leading-relaxed mb-6">
+                            Integrating international advanced design concepts to accelerate product innovation. We can help you determine your lifting needs.
                         </p>
-                    </div>
-
-                    <div class="space-y-8">
-                        <!-- Address -->
-                        <div class="flex items-start space-x-4 md:space-x-6">
-                            <div class="w-12 h-12 md:w-14 md:h-14 bg-primary/10 rounded-xl md:rounded-2xl flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-location-dot text-primary text-lg md:text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-base md:text-lg font-bold text-secondary mb-0.5 md:mb-1">Our Office</h4>
-                                <p class="text-sm md:text-base text-slate-600">House #12, Road #05, Sector #03, Uttara, Dhaka-1230, Bangladesh</p>
-                            </div>
-                        </div>
-
-                        <!-- Phone -->
-                        <div class="flex items-start space-x-4 md:space-x-6">
-                            <div class="w-12 h-12 md:w-14 md:h-14 bg-primary/10 rounded-xl md:rounded-2xl flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-phone text-primary text-lg md:text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-base md:text-lg font-bold text-secondary mb-0.5 md:mb-1">Call Us</h4>
-                                <p class="text-sm md:text-base text-slate-600">+880 1234 567 890</p>
-                                <p class="text-sm md:text-base text-slate-600">+880 1987 654 321</p>
-                            </div>
-                        </div>
-
-                        <!-- Email -->
-                        <div class="flex items-start space-x-4 md:space-x-6">
-                            <div class="w-12 h-12 md:w-14 md:h-14 bg-primary/10 rounded-xl md:rounded-2xl flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-envelope text-primary text-lg md:text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-base md:text-lg font-bold text-secondary mb-0.5 md:mb-1">Email Us</h4>
-                                <p class="text-sm md:text-base text-slate-600">info@arobgroup.com</p>
-                                <p class="text-sm md:text-base text-slate-600">support@arobgroup.com</p>
-                            </div>
-                        </div>
+                        <a href="sigma-passenger-lift.html" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
+                            Learn More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Contact Form -->
-                <div class="bg-white border border-slate-100 shadow-2xl shadow-slate-200/50 rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-12">
-                    <form id="contact-form" action="#" class="space-y-4 md:space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                            <div class="space-y-1.5 md:space-y-2">
-                                <label for="name" class="text-xs md:text-sm font-bold text-secondary uppercase tracking-wider ml-1">Full Name</label>
-                                <input id="name" type="text" placeholder="John Doe" required class="w-full bg-slate-50 border border-slate-200 rounded-xl md:rounded-2xl px-4 md:px-6 py-3 md:py-4 text-sm md:text-base outline-none focus:border-primary transition-all">
-                            </div>
-                            <div class="space-y-1.5 md:space-y-2">
-                                <label for="email" class="text-xs md:text-sm font-bold text-secondary uppercase tracking-wider ml-1">Email Address</label>
-                                <input id="email" type="email" placeholder="john@example.com" required class="w-full bg-slate-50 border border-slate-200 rounded-xl md:rounded-2xl px-4 md:px-6 py-3 md:py-4 text-sm md:text-base outline-none focus:border-primary transition-all">
-                            </div>
-                        </div>
-                        <div class="space-y-1.5 md:space-y-2">
-                            <label for="subject" class="text-xs md:text-sm font-bold text-secondary uppercase tracking-wider ml-1">Subject</label>
-                            <input id="subject" type="text" placeholder="How can we help?" required class="w-full bg-slate-50 border border-slate-200 rounded-xl md:rounded-2xl px-4 md:px-6 py-3 md:py-4 text-sm md:text-base outline-none focus:border-primary transition-all">
-                        </div>
-                        <div class="space-y-1.5 md:space-y-2">
-                            <label for="message" class="text-xs md:text-sm font-bold text-secondary uppercase tracking-wider ml-1">Message</label>
-                            <textarea id="message" rows="4 md:rows-5" placeholder="Tell us about your project..." required class="w-full bg-slate-50 border border-slate-200 rounded-xl md:rounded-2xl px-4 md:px-6 py-3 md:py-4 text-sm md:text-base outline-none focus:border-primary transition-all resize-none"></textarea>
-                        </div>
-                        <button type="submit" id="submit-btn" class="w-full bg-primary hover:bg-accent text-white font-bold py-4 md:py-5 rounded-xl md:rounded-2xl transition-all shadow-xl shadow-primary/20 transform hover:-translate-y-1 text-sm md:text-base">
-                            Send Message
-                        </button>
-                    </form>
+                <!-- Service 2: Advanced Escalator -->
+                <div class="group relative bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1545416/pexels-photo-1545416.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Advanced Escalator" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-heading font-bold text-secondary mb-4 hover:text-primary transition-colors cursor-pointer"><a href="advanced-escalator.html">Advanced Escalator</a></h4>
+                        <p class="text-slate-600 leading-relaxed mb-6">
+                            The factory has many advanced production equipment in the industry to meet the needs of mass production.
+                        </p>
+                        <a href="advanced-escalator.html" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
+                            Learn More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
                 </div>
 
+                <!-- Service 3: Sigma COP & LOP -->
+                <div class="group relative bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sigma COP & LOP" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-heading font-bold text-secondary mb-4 hover:text-primary transition-colors cursor-pointer"><a href="sigma-cop-lop.html">Sigma COP & LOP</a></h4>
+                        <p class="text-slate-600 leading-relaxed mb-6">
+                            We always adhere to the strategy of quality for development. All products are subject to multiple quality testing and strict quality control.
+                        </p>
+                        <a href="sigma-cop-lop.html" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
+                            Learn More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 4: Landing Door -->
+                <div class="group relative bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/2251247/pexels-photo-2251247.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Landing Door" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-heading font-bold text-secondary mb-4 hover:text-primary transition-colors cursor-pointer"><a href="landing-door.html">Landing Door</a></h4>
+                        <p class="text-slate-600 leading-relaxed mb-6">
+                            We always adhere to the strategy of quality for development. All products are subject to multiple quality testing and strict quality control.
+                        </p>
+                        <a href="landing-door.html" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
+                            Learn More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 5: CEILING -->
+                <div class="group relative bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/2085998/pexels-photo-2085998.jpeg?auto=compress&cs=tinysrgb&w=800" alt="CEILING" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-heading font-bold text-secondary mb-4 hover:text-primary transition-colors cursor-pointer"><a href="ceiling.html">CEILING</a></h4>
+                        <p class="text-slate-600 leading-relaxed mb-6">
+                            We always adhere to the strategy of quality for development. All products are subject to multiple quality testing and strict quality control.
+                        </p>
+                        <a href="ceiling.html" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
+                            Learn More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 6: SIGMA ACCESSORIES -->
+                <div class="group relative bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1585814/pexels-photo-1585814.jpeg?auto=compress&cs=tinysrgb&w=800" alt="SIGMA ACCESSORIES" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-heading font-bold text-secondary mb-4 hover:text-primary transition-colors cursor-pointer"><a href="sigma-accessories.html">SIGMA ACCESSORIES</a></h4>
+                        <p class="text-slate-600 leading-relaxed mb-6">
+                            Sigma Elevator Spare Parts, Electrical Control Panels, Synchronous Gearless Motors, AVR & ARD Supplier, Complete Cabin, Motor Control.
+                        </p>
+                        <a href="sigma-accessories.html" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
+                            Learn More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
-
-    <!-- Map Section -->
-    <section class="h-[500px] w-full">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14593.437142823635!2d90.39023605!3d23.876883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c411833e2187%3A0x6b4478f7e7f60759!2sSector%203%2C%20Uttara%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd" 
-            width="100%" 
-            height="100%" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
     </section>
 
     <!-- Footer -->
